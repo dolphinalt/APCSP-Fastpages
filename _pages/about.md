@@ -1,8 +1,15 @@
 ---
 layout: page
-title: About Me
+title: Hi! 👋
 permalink: /about/
 ---
+
+# My name is *Ethan Zhao*
+I am in 10th grade at Del Norte high school!
+I enjoy..
+ - Cybersecurity 🔐
+ - Computer Programming 💻
+ - Basketball 🏀
 
 This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
 
