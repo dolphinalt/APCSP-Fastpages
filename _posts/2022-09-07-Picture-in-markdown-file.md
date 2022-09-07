@@ -7,7 +7,7 @@ title: APCSP picture
 ---
 # Dolphin picture
 
-![if ur seeing this i think the image is like dead lmao](./images/dolfin.png)
+![if ur seeing this i think the image is like dead lmao]({{site.baseurl}}/images/dolfin.png "https://github.com/dolphinalt/APCSP-Fastpages)
 
 hey my computer knows its a dolfin :D
 
