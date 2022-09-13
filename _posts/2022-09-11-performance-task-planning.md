@@ -7,6 +7,7 @@ title: Performance task Planning
 ---
 # Performance task - WEB SERVER CONFIGURATION FILE GENERATOR
 ## Planning
+### [Scrum Board]("https://github.com/raisinbran25/csp2/issues/6") - Shared with Jaden Nguyen
  - [ ] Include these services ["Apache", "LightHTTPD", "Nginx"]
  - [ ] Ask for http or https
  - [ ] Make file paths fully customizable
