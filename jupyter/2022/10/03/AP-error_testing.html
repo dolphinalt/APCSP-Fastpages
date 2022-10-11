@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -586,6 +586,7 @@ window.onload = wrap_img;
          <span class="s2">"fries"</span><span class="p">:</span> <span class="mf">1.99</span><span class="p">,</span>
          <span class="s2">"drink"</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">}</span>
 <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">orderedItems</span><span class="o">=</span><span class="p">[]</span>
 
 <span class="c1">#shows the user the menu and prompts them to select an item</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Menu"</span><span class="p">)</span>
@@ -596,17 +597,27 @@ window.onload = wrap_img;
 <span class="n">totalCost</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">totalCost</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">totalCost</span><span class="p">)</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please select an item from the menu"</span><span class="p">)</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please select an item from the menu, type </span><span class="se">\"</span><span class="s2">exit</span><span class="se">\"</span><span class="s2"> to exit"</span><span class="p">)</span>
     <span class="n">item</span><span class="o">=</span><span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-    <span class="n">totalCost</span><span class="o">+=</span><span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
-    <span class="n">more</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Would you like to order anything else? [Y/N]"</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">more</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"y"</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">elif</span> <span class="n">more</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"n"</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"exit"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Checking out..."</span><span class="p">)</span>
         <span class="k">break</span>
+    <span class="n">orderedItems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="n">totalCost</span><span class="o">+=</span><span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
 
 <span class="c1">#code should add the price of the menu items selected by the user </span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Total: $</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">totalCost</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"┌────────────────────────────┐"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"│ RECEIPT:                   │"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">orderedItems</span><span class="p">:</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="s2">"│ "</span> <span class="o">+</span> <span class="n">item</span> <span class="o">+</span> <span class="s2">" - "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="s2">"burger"</span><span class="p">:</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"              │"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"               │"</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">string</span> <span class="o">+</span> <span class="n">length</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"│ Total - $</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">totalCost</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="si">}</span><span class="s2">              │"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"└────────────────────────────┘"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -623,7 +634,15 @@ window.onload = wrap_img;
 burger  $3.99
 fries  $1.99
 drink  $0.99
-$7.96
+Checking out...
+┌────────────────────────────┐
+│ RECEIPT:                   │
+│ burger - 3.99              │
+│ fries - 1.99               │
+│ drink - 0.99               │
+│ drink - 0.99               │
+│ Total - $7.96              │
+└────────────────────────────┘
 </pre>
 </div>
 </div>
