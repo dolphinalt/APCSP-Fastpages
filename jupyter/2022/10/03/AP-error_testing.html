@@ -604,8 +604,9 @@ window.onload = wrap_img;
     <span class="k">except</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"exit"</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Checking out..."</span><span class="p">)</span>
+            <span class="k">break</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Sorry, we don't have </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-        <span class="k">break</span>
+        <span class="k">continue</span>
     <span class="n">orderedItems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
     <span class="n">totalCost</span><span class="o">+=</span><span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
 
@@ -638,14 +639,15 @@ window.onload = wrap_img;
 burger  $3.99
 fries  $1.99
 drink  $0.99
-Sorry, we don't have exit
+Sorry, we don't have steak
 Checking out...
 ┌────────────────────────────┐
 │ RECEIPT:                   │
 │ burger - 3.99              │
 │ fries - 1.99               │
 │ drink - 0.99               │
-│ Total - $6.97              │
+│ drink - 0.99               │
+│ Total - $7.96              │
 └────────────────────────────┘
 </pre>
 </div>
