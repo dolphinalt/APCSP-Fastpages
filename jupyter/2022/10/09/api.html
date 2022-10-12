@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      1 min read
     
 </span></p>
 
@@ -124,7 +124,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#Python-quiz">Python quiz </a>
+<li class="toc-entry toc-h1"><a href="#API-thing">API thing </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Code-explanation">Code explanation </a></li>
 </ul>
@@ -141,8 +141,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-quiz">
-<a class="anchor" href="#Python-quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python quiz<a class="anchor-link" href="#Python-quiz"> </a>
+<h1 id="API-thing">
+<a class="anchor" href="#API-thing" aria-hidden="true"><span class="octicon octicon-link"></span></a>API thing<a class="anchor-link" href="#API-thing"> </a>
 </h1>
 </div>
 </div>
@@ -154,52 +154,20 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="c1"># question format, gets user answer</span>
-<span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">msg</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://visual-crossing-weather.p.rapidapi.com/forecast"</span>
 
-<span class="c1"># lists of questions/answers</span>
-<span class="n">prompts</span><span class="o">=</span><span class="p">[</span><span class="s2">"What command would you use to display text into the terminal?"</span><span class="p">,</span> <span class="s2">"What command would you use to ask the user for information?"</span><span class="p">,</span> <span class="s2">"What is the keyword used in Python to define a function?"</span><span class="p">,</span> <span class="s2">"How would you write a print statement to concatenate a string containing variable A with string 'Hello'? (include print() and use '' instead of </span><span class="se">\"\"</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"How do we add a pre-made library to our code?"</span><span class="p">,</span> <span class="s2">"We use _______ to store information for later use."</span><span class="p">,</span> <span class="s2">"Given the code, {variable = 1} what type of variable is this?"</span><span class="p">,</span> <span class="s2">"Given the code, {variable = 1.1} what type of variable is this?"</span><span class="p">,</span> <span class="s2">"Given the code, {variable = 'Hello'} what type of variable is this?"</span><span class="p">]</span>
-<span class="n">answers</span><span class="o">=</span><span class="p">[</span><span class="s2">"print"</span><span class="p">,</span> <span class="s2">"input"</span><span class="p">,</span> <span class="s2">"def"</span><span class="p">,</span> <span class="s2">"print('hello' + a)"</span><span class="p">,</span> <span class="s2">"import"</span><span class="p">,</span> <span class="s2">"variables"</span><span class="p">,</span> <span class="s2">"integer"</span><span class="p">,</span> <span class="s2">"float"</span><span class="p">,</span> <span class="s2">"string"</span><span class="p">]</span>
+<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"aggregateHours"</span><span class="p">:</span><span class="s2">"24"</span><span class="p">,</span><span class="s2">"location"</span><span class="p">:</span><span class="s2">"Washington,DC,USA"</span><span class="p">,</span><span class="s2">"contentType"</span><span class="p">:</span><span class="s2">"csv"</span><span class="p">,</span><span class="s2">"unitGroup"</span><span class="p">:</span><span class="s2">"us"</span><span class="p">,</span><span class="s2">"shortColumnNames"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">}</span>
 
-<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">questions</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">prompts</span><span class="p">)</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"eb0bbc6cc0msh085b254f1761bc2p154cf4jsne59a8dbdbaa0"</span><span class="p">,</span>
+	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"visual-crossing-weather.p.rapidapi.com"</span>
+<span class="p">}</span>
 
-<span class="c1"># corrects answers, awards a point if correct</span>
-<span class="k">def</span> <span class="nf">gradeResponse</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">correct</span>
-    <span class="c1"># convert to lowercase so ppl don't yell at me for scoring them as wrong when they went "prinT"</span>
-    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2"> is correct!</span><span class="se">\n</span><span class="s2">Good job :D"</span><span class="p">)</span>
-        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2"> is incorrect!</span><span class="se">\n</span><span class="s2">Better luck next time :("</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
 
-<span class="c1"># ask user if they want to proceed, exit if no</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hello </span><span class="si">{</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span><span class="si">}</span><span class="s2">!"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"You will be asked </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span><span class="si">}</span><span class="s2"> questions."</span><span class="p">)</span>
-<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">"Are you ready to take a quiz? [Y/n]"</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">rsp</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"y"</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Lets get started!"</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Bye :("</span><span class="p">)</span>
-    <span class="n">exit</span><span class="p">()</span>
-
-<span class="c1"># cycle through all questions, score the questions</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">questions</span><span class="p">):</span>
-    <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="n">prompts</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">gradeResponse</span><span class="p">(</span><span class="n">rsp</span><span class="p">,</span> <span class="n">answers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-
-<span class="c1"># calculate percentage</span>
-<span class="n">percentage</span><span class="o">=</span><span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">questions</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
-<span class="n">percentage</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">percentage</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-
-<span class="c1"># report score</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"You got a total of </span><span class="si">{</span><span class="n">correct</span><span class="si">}</span><span class="s2"> out of </span><span class="si">{</span><span class="n">questions</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">percentage</span><span class="si">}</span><span class="s2">%)!"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -212,38 +180,24 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello root!
-You will be asked 9 questions.
-Question: Are you ready to take a quiz? [Y/n]
-Lets get started!
-Question: What command would you use to display text into the terminal?
-prinT is correct!
-Good job :D
-Question: What command would you use to ask the user for information?
-input is correct!
-Good job :D
-Question: What is the keyword used in Python to define a function?
-def is correct!
-Good job :D
-Question: How would you write a print statement to concatenate a string containing variable A with string 'Hello'? (include print() and use '' instead of ""
-print('Hello' + A) is correct!
-Good job :D
-Question: How do we add a pre-made library to our code?
-imporT is correct!
-Good job :D
-Question: We use _______ to store information for later use.
-VaRiaBles is correct!
-Good job :D
-Question: Given the code, {variable = 1} what type of variable is this?
-integer is correct!
-Good job :D
-Question: Given the code, {variable = 1.1} what type of variable is this?
-float is correct!
-Good job :D
-Question: Given the code, {variable = 'Hello'} what type of variable is this?
-bool is incorrect!
-Better luck next time :(
-You got a total of 8 out of 9 (88.89%)!
+<pre>Address,Date time,Latitude,Longitude,Resolved Address,Name,Wind Direction,Minimum Temperature,Maximum Temperature,Temperature,Wind Speed,Cloud Cover,Heat Index,Chance Precipitation (%),Precipitation,Sea Level Pressure,Snow Depth,Snow,Relative Humidity,Wind Gust,Wind Chill,Conditions
+"Washington,DC,USA","10/12/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",140.9,58.9,64.1,60.8,9.7,68.1,,0.0,0.0,1017.3,0.0,0.0,82.3,26.6,,"Partially cloudy"
+"Washington,DC,USA","10/13/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",164.1,57.8,66.3,61.3,10.6,77.6,,90.5,0.0,1011.1,0.0,0.0,93.0,29.1,,"Rain, Overcast"
+"Washington,DC,USA","10/14/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",259.6,52.2,65.2,57.9,5.5,17.0,,9.5,0.0,1012.3,0.0,0.0,47.9,27.7,,"Clear"
+"Washington,DC,USA","10/15/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",183.5,49.0,75.6,61.5,8.1,15.8,,4.8,0.0,1017.0,0.0,0.0,43.5,34.9,47.0,"Clear"
+"Washington,DC,USA","10/16/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",221.8,58.6,71.0,63.1,3.6,70.9,,38.1,0.07,1015.8,0.0,0.0,71.7,15.2,,"Partially cloudy"
+"Washington,DC,USA","10/17/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",311.2,49.2,62.9,57.5,8.0,70.9,,23.8,0.0,1011.7,0.0,0.0,45.6,20.1,45.6,"Partially cloudy"
+"Washington,DC,USA","10/18/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",306.3,40.9,50.8,45.9,8.7,19.7,,9.5,0.0,1013.4,0.0,0.0,55.8,21.7,35.7,"Clear"
+"Washington,DC,USA","10/19/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",305.5,37.1,53.3,44.8,6.1,2.6,,9.5,0.0,1018.6,0.0,0.0,49.2,21.9,32.2,"Clear"
+"Washington,DC,USA","10/20/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",194.1,40.0,61.1,50.3,7.7,30.7,,14.3,0.0,1015.7,0.0,0.0,42.5,31.8,36.0,"Partially cloudy"
+"Washington,DC,USA","10/21/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",284.1,49.0,61.1,54.1,3.9,74.9,,19.0,0.02,1013.0,0.0,0.0,57.3,30.0,48.9,"Partially cloudy"
+"Washington,DC,USA","10/22/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",167.7,45.2,63.1,53.4,3.2,21.9,,14.3,0.0,1018.8,0.0,0.0,50.9,14.9,43.9,"Clear"
+"Washington,DC,USA","10/23/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",119.3,49.5,64.5,56.9,5.7,69.1,,9.5,0.0,1019.7,0.0,0.0,78.5,26.2,48.7,"Partially cloudy"
+"Washington,DC,USA","10/24/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",171.4,58.6,73.8,65.0,9.9,81.4,,23.8,0.02,1015.0,0.0,0.0,71.3,30.2,,"Overcast"
+"Washington,DC,USA","10/25/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",163.9,57.1,73.1,64.1,5.3,10.9,,14.3,0.0,1014.5,0.0,0.0,50.6,24.6,,"Clear"
+"Washington,DC,USA","10/26/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",153.8,58.4,69.2,63.9,5.4,100.0,,28.6,0.02,1011.0,0.0,0.0,85.9,21.5,,"Overcast"
+"Washington,DC,USA","10/27/2022",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",185.9,67.4,67.5,67.4,5.4,100.0,,14.3,0.02,1009.3,0.0,0.0,98.6,21.5,,"Overcast"
+
 </pre>
 </div>
 </div>
