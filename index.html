@@ -1,212 +1,227 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Ethan’s Blog | An easy to use blogging platform with support for Jupyter Notebooks.</title>
-<meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Ethan’s Blog" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://dolphinalt.github.io/APCSP-Fastpages/" />
-<meta property="og:url" content="https://dolphinalt.github.io/APCSP-Fastpages/" />
-<meta property="og:site_name" content="Ethan’s Blog" />
-<meta property="og:image" content="https://dolphinalt.github.io/APCSP-Fastpages/images/logo.png" />
-<meta property="og:type" content="website" />
-<link rel="next" href="https://dolphinalt.github.io/APCSP-Fastpages/page2/" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://dolphinalt.github.io/APCSP-Fastpages/images/logo.png" />
-<meta property="twitter:title" content="Ethan’s Blog" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Ethan’s Blog","image":"https://dolphinalt.github.io/APCSP-Fastpages/images/logo.png","name":"Ethan’s Blog","url":"https://dolphinalt.github.io/APCSP-Fastpages/"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/APCSP-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dolphinalt.github.io/APCSP-Fastpages/feed.xml" title="Ethan's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/APCSP-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Weather - SD</title>
+        <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico">
+        <meta name="description" content="Scrum Daddy's 2022 Tri1 Final Project">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/style.css">
+        <script src="./assets/js/main.js"></script>
+    </head>
+    <!-- resize code -->
+    <script>
+        window.onresize = resize;
+        function resize() {
+            var sourceSize = 1440;
+            var currentSize = window.innerWidth;
+            console.log(currentSize)
+            var resize = currentSize/sourceSize;
+            var percent = resize*100;
+            document.body.style.transform = "scale(" + percent + "%)"
+        }
+    </script>
+    <body style="scale: 100%;" onload='main("San,Diego,USA")' id="body">
+        <div style="scale: 100vw">
+            <div style="position:absolute;width:100%;height:300px;z-index:1;">
+                <div class="nav" style="height: 110px;" id="nav">
+                    <b style="width:34%;max-width:97.5%;text-align:center;z-index:6;" id="location"><p style="font-weight:normal;position: relative;top: -12px;">select location</p></b>
+                    <div style="position:absolute;width:100%;height:37px;top:75px;z-index:5;visibility: hidden;opacity: 0;" id="SanDiegoUSA">
+                        <b style="width:99.9%;max-width:97.5%;text-align:center;"><p style="font-weight:normal;position: relative;top: -12px;">San Diego</p></b>
+                    </div>
+                    <div style="position:absolute;width:100%;height:37px;top:125px;z-index:4;visibility: hidden;opacity: 0;" id="WashingtonDCUSA">
+                        <b style="width:99.9%;max-width:97.5%;text-align:center;"><p style="font-weight:normal;position: relative;top: -12px;">Washington DC</p></b>
+                    </div>
+                    <div style="position:absolute;width:100%;height:37px;top:175px;z-index:3;visibility: hidden;opacity: 0;" id="NewYorkUSA">
+                        <b style="width:99.9%;max-width:97.5%;text-align:center;"><p style="font-weight:normal;position: relative;top: -12px;">New York USA</p></b>
+                    </div>
+                    <div style="position:absolute;width:100%;height:37px;top:225px;z-index:2;visibility: hidden;opacity: 0;" id="SingaporeSingapore">
+                        <b style="width:99.9%;max-width:97.5%;text-align:center;"><p style="font-weight:normal;position: relative;top: -12px;">Singapore</p></b>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="position:absolute;width:100%;height:300px;top:-25px;z-index:-1;">
+                    <div class="location" style="text-align:center">
+                        <!-- <span id="location"></span> -->
+                        <p id="place">LOCATION</p>
+                    </div>
+                </div>
+                <div style="position:absolute;width:100%;height:300px;top:0px;z-index:-1;">
+                    <div class="temperature" style="text-align:center;">
+                        <!-- <span id="temperature"></span> -->
+                            <p id="todayTemperature">XX</p>
+                    </div>
+                </div>
+                <div style="position:absolute;width:100%;height:300px;top:238px;z-index:-1;">
+                    <div class="info" style="text-align:center">
+                        <!-- <span id="quality"></span> -->
+                        <p id="todayQuality"style="position: relative;top:-5px;>Quality Quality</p>
+                        <br>
+                        <!-- High: <span id="highTemperature"></span> Low: <span id="lowTemperature"></span> -->
+                        <p id="todayLowHigh" style="position: relative;top:-30px;">High: XX° Low: XX°</p>
+                    </div>
+                </div>
+            </div>
 
-<script>
-function wrap_img(fn) {
-    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
-        var elements = document.querySelectorAll(".post img");
-        Array.prototype.forEach.call(elements, function(el, i) {
-            if (el.getAttribute("title") && (el.className != "emoji")) {
-                const caption = document.createElement('figcaption');
-                var node = document.createTextNode(el.getAttribute("title"));
-                caption.appendChild(node);
-                const wrapper = document.createElement('figure');
-                wrapper.className = 'image';
-                el.parentNode.insertBefore(wrapper, el);
-                el.parentNode.removeChild(el);
-                wrapper.appendChild(el);
-                wrapper.appendChild(caption);
-            }
-        });
-    } else { document.addEventListener('DOMContentLoaded', fn); }
-}
-window.onload = wrap_img;
-</script>
+            <!--Submenus-->
+            <!--Help Text 
+                ETHAN: REMOVED HELP BECAUSE THERES NOT MUCH OF A POINT
+            -->
+            <!--dropdown-->
+            <div id="searchResults" style="display: none;z-index:99999;">
+                <!-- 
+                    turn every entry into button
+                    when button pressed, send js commands as follows:
+                    ```js
+                    registerLocation(San,Diego,USA)
+                    registerLocation(Washington,DC,USA)
+                    registerLocation(New,York,New,York,USA)
+                    registerLocation(Singapore,Singapore)
+                    ```
+                 -->
+                <table>
+                    <tr>
+                        <th>Search Results:</th>
+                    </tr>
+                    <tr>
+                        <th>San Diego, California, USA</th>
+                    </tr>
+                    <tr>
+                        <th>Washington DC, USA</th>
+                    </tr>
+                    <tr>
+                        <th>New York, USA</th>
+                    </tr>
+                    <tr>
+                        <th>Singapore, Singapore</th>
+                    </tr>
+                </table>
+            </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(){
-    // add link icon to anchor tags
-    var elem = document.querySelectorAll(".anchor-link")
-    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
-    });
-</script>
-</head>
-<body><header class="site-header">
-
-  <div class="wrapper"><a class="site-title" rel="author" href="/APCSP-Fastpages/">Ethan&#39;s Blog</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger"><a class="page-link" href="/APCSP-Fastpages/about/">About Me</a><a class="page-link" href="/APCSP-Fastpages/search/">Search</a><a class="page-link" href="/APCSP-Fastpages/categories/">Tags</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home"><h1 id="welcome-to-ethans-blog">Welcome to Ethan’s blog!</h1>
-<p>This site is built with <a href="https://github.com/fastai/fastpages">fastpages</a>, An easy to use blogging platform with extra features for Jupyter Notebooks.</p>
-
-<h1 id="posts">Posts</h1>
-
-
-
-  
-
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
-
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
-
- 
-  
-
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/jupyter/2022/10/09/api.html">
-    Python API example
-    </a>
-</h3><p class="post-meta-description">Ethan Zhao</p><p class="post-meta">Oct 9, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/jupyter/2022/10/03/AP-error_testing.html">
-    AP Error testing
-    </a>
-</h3><p class="post-meta-description">Ethan Zhao</p><p class="post-meta">Oct 3, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/markdown/2022/09/19/fastpages-server.html">
-    Fastpages server
-    </a>
-</h3><p class="post-meta-description">Fastpages Server</p><p class="post-meta">Sep 19, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/markdown/2022/09/11/quiz-blog.html">
-    Quiz blog
-    </a>
-</h3><p class="post-meta-description">Blogging my difficulties and successes with the quiz project</p><p class="post-meta">Sep 11, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/markdown/2022/09/11/performance-task-planning.html">
-    Performance task Planning
-    </a>
-</h3><p class="post-meta-description">Planning page for Performance Task (date will be updated to last edit)</p><p class="post-meta">Sep 11, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/markdown/2022/09/11/Psychology-and-the-Good-Life.html">
-    Psychology and the Good Life
-    </a>
-</h3><p class="post-meta-description">Notes on the Psychology and the Good Life video</p><p class="post-meta">Sep 11, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/markdown/2022/09/07/html-hacks.html">
-    HTML hacks
-    </a>
-</h3><p class="post-meta-description">HTML hacks.</p><p class="post-meta">Sep 7, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/calendar/">
-    Calendar
-    </a>
-</h3><p class="post-meta">Sep 7, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/jupyter/2022/09/07/python-hacks.html">
-    Python hacks project
-    </a>
-</h3><p class="post-meta-description">Ethan Zhao</p><p class="post-meta">Sep 7, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/markdown/2022/09/07/Picture-in-markdown-file.html">
-    APCSP picture
-    </a>
-</h3><p class="post-meta-description">Inserting a picture into my markdown page.</p><p class="post-meta">Sep 7, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/jupyter/2022/08/26/bash-project.html">
-    Bash hacks project
-    </a>
-</h3><p class="post-meta-description">Ethan Zhao</p><p class="post-meta">Aug 26, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/jupyter/2022/08/24/python-quiz.html">
-    Python Quiz for APCSP
-    </a>
-</h3><p class="post-meta-description">Ethan Zhao</p><p class="post-meta">Aug 24, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/markdown/2022/08/21/APCSP-markdown-post.html">
-    APCSP Markdown page
-    </a>
-</h3><p class="post-meta-description">Markdown test page for APCSP.</p><p class="post-meta">Aug 21, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/markdown/2020/10/12/APCSP-Final-frontend-plan.html">
-    APCSP final frontend plan
-    </a>
-</h3><p class="post-meta-description">APCSP final frontend plan</p><p class="post-meta">Oct 12, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/APCSP-Fastpages/jupyter/2020/02/22/test.html">
-    Fastpages jupyter notebook test for APCSP
-    </a>
-</h3><p class="post-meta-description">making a jupyter notebook on fastpages to test.</p><p class="post-meta">Feb 22, 2020</p>
-</li></ul>
-
-    
-      <div class="pager">
-        <ul class="pagination">
-          <li><div class="pager-edge">•</div></li>
-          <li><div class="current-page">1</div></li>
-          <li><a href="/APCSP-Fastpages/page2/" class="next-page">2</a></li>
-        </ul>
-      </div></div>
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/APCSP-Fastpages/"></data>
-
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="/APCSP-Fastpages/feed.xml">
-            <svg class="svg-icon orange">
-              <use xlink:href="/APCSP-Fastpages/assets/minima-social-icons.svg#rss"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-      </div>
-      <div class="footer-col">
-        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
-      </div>
-    </div>
-
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/APCSP-Fastpages/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/APCSP-Fastpages/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
-</div>
-
-  </div>
-
-</footer>
-</body>
-
+            <!--<div style="display: none" id="among">
+                <audio controls>
+                    <source src="among.mp3" type="audio/mpeg" id="among2">
+                </audio>
+            </div>-->
+            <!-- 238px from edge first one, 478px from top all --> 
+            <!-- to confirm recent version -->
+        </div>
+            </div>
+                <div style="position:absolute;width:100%;height:300px;top:0px;z-index:-1;">
+                    <div class="tile" style="position:absolute; left:11.05%; width:25%; height:375px; top: 350px;">
+                        <div class="tileDay">
+                            Tomorrow
+                        </div>
+                        <div class="tileTemperature">
+                            <p id="tile0temp" style="margin: 0;">XX</p>
+                        </div>
+                        <div id="tile0glyph"></div>
+                        <div class="tileInfo">
+                            <p id="tile0quality" style="margin-top: 10px;">QUALITY</p>
+                            <br>
+                            <p id="tile0lowHigh" style="margin-top:-55px;">High: XX° Low: XX°</p>
+                        </div>
+                    </div>
+                    <div class="tile" style="position:absolute; left:36.75%; width:25%; height:375px; top: 350px;">
+                        <div class="tileDay">
+                            <p id="tile1day" style="margin: 0;">XX/XX</p>
+                        </div>
+                        <div class="tileTemperature">
+                            <p id="tile1temp" style="margin: 0;">XX</p>
+                        </div>
+                        <div id="tile1glyph"></div>
+                        <div class="tileInfo">
+                            <p id="tile1quality" style="margin-top: 10px;">QUALITY</p>
+                            <br>
+                            <p id="tile1lowHigh" style="margin-top:-55px;">High: XX° Low: XX°</p>
+                        </div>
+                    </div>
+                    <div class="tile" style="position:absolute; left:62.45%; width:25%; height:375px; top: 350px;">
+                        <div class="tileDay">
+                            <p id="tile2day" style="margin: 0;">XX/XX</p>
+                        </div>
+                        <div class="tileTemperature">
+                            <p id="tile2temp" style="margin: 0;">XX</p>
+                        </div>
+                        <div id="tile2glyph"></div>
+                        <div class="tileInfo">
+                            <p id="tile2quality" style="margin-top: 10px;">QUALITY</p>
+                            <br>
+                            <p id="tile2lowHigh" style="margin-top:-55px;">High: XX° Low: XX°</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
+
+<!--location selector-->
+
+<script>
+    var button = document.getElementById("location");
+    open = false;
+    button.addEventListener("click", function(event) {
+        //Is the menu already open?
+        if(!open) {
+            //Open it
+            document.getElementById("SanDiegoUSA").style.opacity = "1";
+            document.getElementById("WashingtonDCUSA").style.opacity = "1";
+            document.getElementById("NewYorkUSA").style.opacity = "1";
+            document.getElementById("SingaporeSingapore").style.opacity = "1";
+            document.getElementById("SanDiegoUSA").style.visibility = "visible";
+            document.getElementById("WashingtonDCUSA").style.visibility = "visible";
+            document.getElementById("NewYorkUSA").style.visibility = "visible";
+            document.getElementById("SingaporeSingapore").style.visibility = "visible";
+            document.getElementById("location").style.width = "99.9%";
+            //Expand nav bar and set as closed
+            document.getElementById("nav").style.height = "350px";
+            // document.getElementById("nav").style["background-color"] = "rgb(255, 255, 255, 0.75)";
+            open = true;
+            //Show stuff
+        } else {
+            //Close it
+            //Show all other things in nav and put my location back
+            document.getElementById("SanDiegoUSA").style.opacity = "0";
+            document.getElementById("WashingtonDCUSA").style.opacity = "0";
+            document.getElementById("NewYorkUSA").style.opacity = "0";
+            document.getElementById("SingaporeSingapore").style.opacity = "0";
+            document.getElementById("SanDiegoUSA").style.visibility = "hidden";
+            document.getElementById("WashingtonDCUSA").style.visibility = "hidden";
+            document.getElementById("NewYorkUSA").style.visibility = "hidden";
+            document.getElementById("SingaporeSingapore").style.visibility = "hidden";
+            document.getElementById("location").style.width = "34%";
+            //Set nav bar to normal and set open as false
+            document.getElementById("nav").style.height = "110px";
+            // document.getElementById("nav").style["background-color"] = "rgb(84, 84, 84,0.9);";
+            open = false;
+            //Un-Show stuff
+        }
+    });
+    var button = document.getElementById("SanDiegoUSA");
+    open = false;
+    button.addEventListener("click", function(event) {
+        main("San,Diego,USA")
+        document.getElementById("body").style["background-image"] = 'url("./assets/png/San,Diego,USA.png")';
+    })
+    var button = document.getElementById("WashingtonDCUSA");
+    open = false;
+    button.addEventListener("click", function(event) {
+        main("Washington,DC,USA")
+        document.getElementById("body").style["background-image"] = 'url("./assets/png/Washington,DC,USA.png")';
+    })
+    var button = document.getElementById("NewYorkUSA");
+    open = false;
+    button.addEventListener("click", function(event) {
+        main("New,York,New,York,USA")
+        document.getElementById("body").style["background-image"] = 'url("./assets/png/New,York,New,York,USA.png")';
+    })
+    var button = document.getElementById("SingaporeSingapore");
+    open = false;
+    button.addEventListener("click", function(event) {
+        main("Singapore,Singapore")
+        document.getElementById("body").style["background-image"] = 'url("./assets/png/Singapore,Singapore.png")';
+    })
+</script>
+<script src="./assets/glacial-indifference/other/hi.js"></script>
