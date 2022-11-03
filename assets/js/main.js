@@ -84,22 +84,22 @@ function main(wantedLocation) {
         document.getElementById('tile0temp').textContent = temp1Res;
         document.getElementById('tile0quality').textContent = conditions1;
         if (conditions1.includes("Rain")) {
-            svg='<img src="./assets/SVG/Rainy.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/Rainy.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile0glyph').innerHTML = svg;
         } else if (conditions1.includes("Clear")) {
-            svg='<img src="./assets/SVG/Sunny.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/Sunny.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile0glyph').innerHTML = svg;
         } else if (conditions1.includes("Partially cloudy")) {
-            svg='<img src="./assets/SVG/PartiallyCloudy.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/PartiallyCloudy.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile0glyph').innerHTML = svg;
         } else if (conditions1.includes("Mostly cloudy")) {
-            svg='<img src="./assets/SVG/MostlyCloudy.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/MostlyCloudy.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile0glyph').innerHTML = svg;
         } else if (conditions1.includes("Overcast")) {
-            svg='<img src="./assets/SVG/Cloudy.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/Cloudy.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile0glyph').innerHTML = svg;
         } else if (conditions1.includes("Storm")) {
-            svg='<img src="./assets/SVG/Stormy.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/Stormy.svg" alt="' + conditions1 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile0glyph').innerHTML = svg;
         }
         document.getElementById('tile0lowHigh').textContent = lowHigh1;
@@ -108,22 +108,22 @@ function main(wantedLocation) {
         document.getElementById('tile1temp').textContent = temp2Res;
         document.getElementById('tile1quality').textContent = conditions2;
         if (conditions2.includes("Rain")) {
-            svg='<img src="./assets/SVG/Rainy.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/Rainy.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile1glyph').innerHTML = svg;
         } else if (conditions2.includes("Clear")) {
-            svg='<img src="./assets/SVG/Sunny.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/Sunny.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile1glyph').innerHTML = svg;
         } else if (conditions2.includes("Partially cloudy")) {
-            svg='<img src="./assets/SVG/PartiallyCloudy.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/PartiallyCloudy.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile1glyph').innerHTML = svg;
         } else if (conditions2.includes("Mostly cloudy")) {
-            svg='<img src="./assets/SVG/MostlyCloudy.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/MostlyCloudy.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile1glyph').innerHTML = svg;
         } else if (conditions2.includes("Overcast")) {
-            svg='<img src="./assets/SVG/Cloudy.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/Cloudy.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile1glyph').innerHTML = svg;
         } else if (conditions2.includes("Storm")) {
-            svg='<img src="./assets/SVG/Stormy.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
+            svg='<img src="./assets/svg/Stormy.svg" alt="' + conditions2 + '" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>'
             document.getElementById('tile1glyph').innerHTML = svg;
         }
         document.getElementById('tile1lowHigh').textContent = lowHigh2;
@@ -168,4 +168,4 @@ function main(wantedLocation) {
     xhr.send(data);
 }
 
-//<img src="./assets/SVG/Rainy.svg" alt="triangle with all three sides equal" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>
+//<img src="./assets/svg/Rainy.svg" alt="triangle with all three sides equal" height="100" width="100" style="display: block;margin: auto;margin-top: -20px;"/>
