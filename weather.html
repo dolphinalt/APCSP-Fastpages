@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Weather - SD</title>
+        <link rel="icon" type="image/x-icon" href="https://dolphinalt.github.io/APCSP-Fastpages/assets/icon/favicon.ico">
+        <meta name="description" content="Scrum Daddy's 2022 Tri1 Final Project">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://dolphinalt.github.io/APCSP-Fastpages/assets/style.css">
+        <script src="https://dolphinalt.github.io/APCSP-Fastpages/assets/js/main.js"></script>
+        <link href="https://dolphinalt.github.io/APCSP-Fastpages/assets/fonts/glacial-indifference/GlacialIndifference-Bold.otf" rel="opentype"></href>
+        <link href="https://dolphinalt.github.io/APCSP-Fastpages/assets/fonts/glacial-indifference/GlacialIndifference-Italic.otf" rel="opentype"></href>
+        <link href="https://dolphinalt.github.io/APCSP-Fastpages/assets/fonts/glacial-indifference/GlacialIndifference-Regular.otf" rel="opentype"></href>
+</head>
+    <!-- resize code -->
+    <script>
+        window.onresize = resize;
+        function resize() {
+            var sourceSize = 1440;
+            var currentSize = window.innerWidth;
+            console.log(currentSize)
+            var resize = currentSize/sourceSize;
+            var percent = resize*100;
+            document.body.style.transform = "scale(" + percent + "%)"
+        }
+    </script>
+    <body style="scale: 100%;" onload='main("San,Diego,USA")' id="body">
+        <div style="scale: 100vw">
+            <div style="position:absolute;width:100%;height:300px;z-index:1;">
+                <div class="nav" style="height: 110px;" id="nav">
+                    <b style="width:34%;max-width:97.5%;text-align:center;z-index:6;" id="location"><p style="font-weight:normal;position: relative;top: -12px;">select location</p></b>
+                    <div style="position:absolute;width:100%;height:37px;top:75px;z-index:5;visibility: hidden;opacity: 0;" id="SanDiegoUSA">
+                        <b style="width:99.9%;max-width:97.5%;text-align:center;"><p style="font-weight:normal;position: relative;top: -12px;">San Diego</p></b>
+                    </div>
+                    <div style="position:absolute;width:100%;height:37px;top:125px;z-index:4;visibility: hidden;opacity: 0;" id="WashingtonDCUSA">
+                        <b style="width:99.9%;max-width:97.5%;text-align:center;"><p style="font-weight:normal;position: relative;top: -12px;">Washington DC</p></b>
+                    </div>
+                    <div style="position:absolute;width:100%;height:37px;top:175px;z-index:3;visibility: hidden;opacity: 0;" id="NewYorkUSA">
+                        <b style="width:99.9%;max-width:97.5%;text-align:center;"><p style="font-weight:normal;position: relative;top: -12px;">New York USA</p></b>
+                    </div>
+                    <div style="position:absolute;width:100%;height:37px;top:225px;z-index:2;visibility: hidden;opacity: 0;" id="SingaporeSingapore">
+                        <b style="width:99.9%;max-width:97.5%;text-align:center;"><p style="font-weight:normal;position: relative;top: -12px;">Singapore</p></b>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="position:absolute;width:100%;height:300px;top:-25px;z-index:-1;">
+                    <div class="location" style="text-align:center">
+                        <!-- <span id="location"></span> -->
+                        <p id="place">LOCATION</p>
+                    </div>
+                </div>
+                <div style="position:absolute;width:100%;height:300px;top:0px;z-index:-1;">
+                    <div class="temperature" style="text-align:center;">
+                        <!-- <span id="temperature"></span> -->
+                            <p id="todayTemperature">XX</p>
+                    </div>
+                </div>
+                <div style="position:absolute;width:100%;height:300px;top:238px;z-index:-1;">
+                    <div class="info" style="text-align:center">
+                        <!-- <span id="quality"></span> -->
+                        <p id="todayQuality"style="position: relative;top:-5px;>Quality Quality</p>
+                        <br>
+                        <!-- High: <span id="highTemperature"></span> Low: <span id="lowTemperature"></span> -->
+                        <p id="todayLowHigh" style="position: relative;top:-30px;">High: XX° Low: XX°</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Submenus-->
+            <!--Help Text 
+                ETHAN: REMOVED HELP BECAUSE THERES NOT MUCH OF A POINT
+            -->
+            <!--dropdown-->
+            <div id="searchResults" style="display: none;z-index:99999;">
+                <!-- 
+                    turn every entry into button
+                    when button pressed, send js commands as follows:
+                    ```js
+                    registerLocation(San,Diego,USA)
+                    registerLocation(Washington,DC,USA)
+                    registerLocation(New,York,New,York,USA)
+                    registerLocation(Singapore,Singapore)
+                    ```
+                 -->
+                <table>
+                    <tr>
+                        <th>Search Results:</th>
+                    </tr>
+                    <tr>
+                        <th>San Diego, California, USA</th>
+                    </tr>
+                    <tr>
+                        <th>Washington DC, USA</th>
+                    </tr>
+                    <tr>
+                        <th>New York, USA</th>
+                    </tr>
+                    <tr>
+                        <th>Singapore, Singapore</th>
+                    </tr>
+                </table>
+            </div>
+
+            <!--<div style="display: none" id="among">
+                <audio controls>
+                    <source src="among.mp3" type="audio/mpeg" id="among2">
+                </audio>
+            </div>-->
+            <!-- 238px from edge first one, 478px from top all --> 
+            <!-- to confirm recent version -->
+        </div>
+            </div>
+                <div style="position:absolute;width:100%;height:300px;top:0px;z-index:-1;">
+                    <div class="tile" style="position:absolute; left:11.05%; width:25%; height:375px; top: 350px;">
+                        <div class="tileDay">
+                            Tomorrow
+                        </div>
+                        <div class="tileTemperature">
+                            <p id="tile0temp" style="margin: 0;">XX</p>
+                        </div>
+                        <div id="tile0glyph"></div>
+                        <div class="tileInfo">
+                            <p id="tile0quality" style="margin-top: 10px;">QUALITY</p>
+                            <br>
+                            <p id="tile0lowHigh" style="margin-top:-55px;">High: XX° Low: XX°</p>
+                        </div>
+                    </div>
+                    <div class="tile" style="position:absolute; left:36.75%; width:25%; height:375px; top: 350px;">
+                        <div class="tileDay">
+                            <p id="tile1day" style="margin: 0;">XX/XX</p>
+                        </div>
+                        <div class="tileTemperature">
+                            <p id="tile1temp" style="margin: 0;">XX</p>
+                        </div>
+                        <div id="tile1glyph"></div>
+                        <div class="tileInfo">
+                            <p id="tile1quality" style="margin-top: 10px;">QUALITY</p>
+                            <br>
+                            <p id="tile1lowHigh" style="margin-top:-55px;">High: XX° Low: XX°</p>
+                        </div>
+                    </div>
+                    <div class="tile" style="position:absolute; left:62.45%; width:25%; height:375px; top: 350px;">
+                        <div class="tileDay">
+                            <p id="tile2day" style="margin: 0;">XX/XX</p>
+                        </div>
+                        <div class="tileTemperature">
+                            <p id="tile2temp" style="margin: 0;">XX</p>
+                        </div>
+                        <div id="tile2glyph"></div>
+                        <div class="tileInfo">
+                            <p id="tile2quality" style="margin-top: 10px;">QUALITY</p>
+                            <br>
+                            <p id="tile2lowHigh" style="margin-top:-55px;">High: XX° Low: XX°</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!--location selector-->
+
+<script>
+    var button = document.getElementById("location");
+    open = false;
+    button.addEventListener("click", function(event) {
+        //Is the menu already open?
+        if(!open) {
+            //Open it
+            document.getElementById("SanDiegoUSA").style.opacity = "1";
+            document.getElementById("WashingtonDCUSA").style.opacity = "1";
+            document.getElementById("NewYorkUSA").style.opacity = "1";
+            document.getElementById("SingaporeSingapore").style.opacity = "1";
+            document.getElementById("SanDiegoUSA").style.visibility = "visible";
+            document.getElementById("WashingtonDCUSA").style.visibility = "visible";
+            document.getElementById("NewYorkUSA").style.visibility = "visible";
+            document.getElementById("SingaporeSingapore").style.visibility = "visible";
+            document.getElementById("location").style.width = "99.9%";
+            //Expand nav bar and set as closed
+            document.getElementById("nav").style.height = "350px";
+            // document.getElementById("nav").style["background-color"] = "rgb(255, 255, 255, 0.75)";
+            open = true;
+            //Show stuff
+        } else {
+            //Close it
+            //Show all other things in nav and put my location back
+            document.getElementById("SanDiegoUSA").style.opacity = "0";
+            document.getElementById("WashingtonDCUSA").style.opacity = "0";
+            document.getElementById("NewYorkUSA").style.opacity = "0";
+            document.getElementById("SingaporeSingapore").style.opacity = "0";
+            document.getElementById("SanDiegoUSA").style.visibility = "hidden";
+            document.getElementById("WashingtonDCUSA").style.visibility = "hidden";
+            document.getElementById("NewYorkUSA").style.visibility = "hidden";
+            document.getElementById("SingaporeSingapore").style.visibility = "hidden";
+            document.getElementById("location").style.width = "34%";
+            //Set nav bar to normal and set open as false
+            document.getElementById("nav").style.height = "110px";
+            // document.getElementById("nav").style["background-color"] = "rgb(84, 84, 84,0.9);";
+            open = false;
+            //Un-Show stuff
+        }
+    });
+    var button = document.getElementById("SanDiegoUSA");
+    open = false;
+    button.addEventListener("click", function(event) {
+        main("San,Diego,USA")
+        document.getElementById("body").style["background-image"] = 'url("https://dolphinalt.github.io/APCSP-Fastpages/assets/png/San,Diego,USA.png")';
+    })
+    var button = document.getElementById("WashingtonDCUSA");
+    open = false;
+    button.addEventListener("click", function(event) {
+        main("Washington,DC,USA")
+        document.getElementById("body").style["background-image"] = 'url("https://dolphinalt.github.io/APCSP-Fastpages/assets/png/Washington,DC,USA.png")';
+    })
+    var button = document.getElementById("NewYorkUSA");
+    open = false;
+    button.addEventListener("click", function(event) {
+        main("New,York,New,York,USA")
+        document.getElementById("body").style["background-image"] = 'url("https://dolphinalt.github.io/APCSP-Fastpages/assets/png/New,York,New,York,USA.png")';
+    })
+    var button = document.getElementById("SingaporeSingapore");
+    open = false;
+    button.addEventListener("click", function(event) {
+        main("Singapore,Singapore")
+        document.getElementById("body").style["background-image"] = 'url("https://dolphinalt.github.io/APCSP-Fastpages/assets/png/Singapore,Singapore.png")';
+    })
+</script>
+<script src="https://dolphinalt.github.io/APCSP-Fastpages/assets/glacial-indifference/other/hi.js"></script>
