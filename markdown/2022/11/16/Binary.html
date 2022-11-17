@@ -126,7 +126,7 @@ window.onload = wrap_img;
             </tr>
             </table>
         </div>
-        <div id="color" style="height:250px; width:250px;"></div>
+        <div id="color" style="height:250px; width:250px;"><p id="colorHex"></p></div>
         <div class="col-12">
             
             
@@ -341,7 +341,7 @@ window.onload = wrap_img;
         // Ascii conversion
         document.getElementById('ascii').innerHTML = parseInt(binary, 2).fromCharCode(10);
         // Color conversion
-        document.getElementById('color').innerHTML = "#" + hex;
+        document.getElementById('colorHex').innerHTML = "#" + hex;
         document.getElementById("color").style.backgroundColor = "#" + hex;
 
     }
