@@ -1,6 +1,10 @@
 help:
 	cat Makefile
 
+server-no-force:
+	docker-compose down --remove-orphans || true;
+	docker-compose up
+
 # start (or restart) the services
 server: .FORCE
 	docker-compose down --remove-orphans || true;
@@ -50,4 +54,4 @@ restart-jekyll: .FORCE
 	docker-compose restart jekyll
 
 .FORCE:
-	chmod -R u+rw .
+	# chmod -R u+rw .
