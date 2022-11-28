@@ -21,7 +21,7 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-addition-calculator">Python addition calculator<a class="anchor-link" href="#Python-addition-calculator"> </a></h1>
+<h1 id="Variable-and-Assignment-Homework">Variable and Assignment Homework<a class="anchor-link" href="#Variable-and-Assignment-Homework"> </a></h1>
 </div>
 </div>
 </div>
