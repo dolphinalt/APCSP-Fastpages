@@ -255,6 +255,17 @@
   
     
         ,"post23": {
+            "title": "Defenitions",
+            "content": "Defenitions . Unit 2 - Binary/Data Terms . Bits - Most basic unit of info in computing. . Bytes - Unit of info in computing consisting of 8 bits. . Hexadecimal - A way of representing data using 16 symbols. . Nibbles - Half of a byte, 4 bits. . Unsigned Integer - A number that doesn’t have a [+] or [-] sign assigned to it. However, it will always be non-negative. . Signed Integer - A number that has a [+] or [-] sign assigned to it. It can be negative or positive. . Floating Point - A positive or negative integer with a decimal point. . Boolean - A value that is either true or false. . ASCII - stands for American Standard Code for Information Interchange, and includes all printable characters in computing. . Unicode - A universal standard for the encoding, representation, and handling of text. . RGB - Stands for Red Green Blue and is used as a representation of color . Lossy - Short for lossy compression, a data compression approach that results in loss or change of data. . Lossless (not discussed yet) - Short for losless compression, a data compression approach that allows for no loss or change in data. . Unit 3 - Algorithm/Programming Terms . Variables - A storage of data within a programming language. . Data Types - Represents different types of data, such as integers, strings, booleans, floats, and many more. . Assignment Operators - Assigns a value to a variable. . Lists - A data type that contains some amount of values. . 2D Lists - Multiple lists within one list, creating almost a sort of visualized 2d rectangle. . Dictionaries - An array or map that stores an abstraction of key, value pairs. . Class - An object in a programming language with multiple attributes assigned to it. . Algorithms - A sequence of instructions to perform a task. . Sequence - A sequence is a set of commands to be carried out in the order they are given. . Selection - Grabbing a value from a list, string, or any other data type. . Iteration - Going through each index in a list, string, or any other data type. . Expressions - A combination of functions or variables that returns a value. . Comparison Operators - Opperators that allow us to compare 2 or more variables to each other. . Booleans Expressions and Selection - Expressions involving selection and comparisons, resulting in a true or false output. . Booleans Expressions and Iteration - Expressions involving an iteration through a list or any other data type resulting in a true or false output. . Truth Tables - A logical table to compare binary based on logical operations. . Characters - Each individual letter in a string. . Strings - A combination of characters. . Length - The length in chracters or items of a string or list. . Concatenation - Combining multiple strings together. . Upper - Converting a string to all uppercase. . Lower - Converting a string to all lowercase. . Traversing Strings - Selecting all elements of as string one after another. . Python If - if condition: An expression for if a condition is true or false. . Elif - elif condition: An expression for if a condition is true or false AFTER a condition has been false. . Else conditionals - else: An expression for if a condition is true or false if no other if statements or elif statements have been true. . Nested Selection Statements - Multiple statements within each other. . Python For - for condition: For the time that the condition is true, do things inside of the loop. . While loops with Range - while var comparison range(string): While the condition is true, do things inside of the loop. . While loops with List - while var comparison range(list): While the condition is true, do things inside of the loop. . Combining loops with conditionals to Break, Continue - Continue past the loop if condition is met, stop the loop if the condition is met. . Procedural Abstraction - When you know what a procedure or method will du but don’t know how it does it. . Python Def procedures - def function(parameters): A function defined in python. . Parameters - Arguments that are passed into a function. . Return Values - return value A variable that is returned from a function. .",
+            "url": "https://dolphinalt.github.io/APCSP-Fastpages/markdown/2022/08/12/Defenitions.html",
+            "relUrl": "/markdown/2022/08/12/Defenitions.html",
+            "date": " • Aug 12, 2022"
+        }
+        
+    
+  
+    
+        ,"post24": {
             "title": "APCSP final frontend plan",
             "content": "APCSP final frontend plan . .",
             "url": "https://dolphinalt.github.io/APCSP-Fastpages/markdown/2020/10/12/APCSP-Final-frontend-plan.html",
@@ -265,7 +276,7 @@
     
   
     
-        ,"post24": {
+        ,"post25": {
             "title": "Fastpages jupyter notebook test for APCSP",
             "content": "Python addition calculator . a=input(&quot;enter number 1: &quot;) b=input(&quot;enter number 2: &quot;) try: a=int(a) pass except: print(&quot;Please enter a number!&quot;) exit() try: b=int(b) pass except: print(&quot;Please enter a number!&quot;) exit() print(f&quot;{a}+{b}={a+b}&quot;) . 1+2=3 .",
             "url": "https://dolphinalt.github.io/APCSP-Fastpages/jupyter/2020/02/22/test.html",
@@ -276,7 +287,7 @@
     
   
     
-        ,"post25": {
+        ,"post26": {
             "title": "Fastpages jupyter notebook test for APCSP",
             "content": "Python addition calculator . a=input(&quot;enter number 1: &quot;) b=input(&quot;enter number 2: &quot;) try: a=int(a) pass except: print(&quot;Please enter a number!&quot;) exit() try: b=int(b) pass except: print(&quot;Please enter a number!&quot;) exit() print(f&quot;{a}+{b}={a+b}&quot;) . 1+2=3 .",
             "url": "https://dolphinalt.github.io/APCSP-Fastpages/jupyter/2020/02/22/test-copy.html",
@@ -287,7 +298,7 @@
     
   
     
-        ,"post26": {
+        ,"post27": {
             "title": "An Example Markdown Post",
             "content": "Example Markdown Post . Basic setup . Jekyll requires blog post files to be named according to the following format: . YEAR-MONTH-DAY-filename.md . Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and filename is whatever file name you choose, to remind yourself what this post is about. .md is the file extension for markdown files. . The first line of the file should start with a single hash character, then a space, then your title. This is how you create a “level 1 heading” in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line ## File names above. . Basic formatting . You can use italics, bold, code font text, and create links. Here’s a footnote 1. Here’s a horizontal rule: . . Lists . Here’s a list: . item 1 | item 2 | . And a numbered list: . item 1 | item 2 | Boxes and stuff . This is a quotation . . You can include alert boxes …and… . . You can include info boxes Images . . Code . You can format text and code per usual . General preformatted text: . # Do a thing do_thing() . Python code and output: . # Prints &#39;2&#39; print(1+1) . 2 . Formatting text as shell commands: . echo &quot;hello world&quot; ./some_script.sh --option &quot;value&quot; wget https://example.com/cat_photo1.png . Formatting text as YAML: . key: value - another_key: &quot;another value&quot; . Tables . Column 1 Column 2 . A thing | Another thing | . Tweetcards . Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 Footnotes . This is the footnote. &#8617; . |",
             "url": "https://dolphinalt.github.io/APCSP-Fastpages/markdown/2020/01/14/test-markdown-post.html",
