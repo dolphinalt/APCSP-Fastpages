@@ -8,6 +8,8 @@ title: An Example Markdown Post
 
 # Big Idea 5.1 Beneficial and Harmful Effects
 
+## Blog reviews
+
 1. **Powerful laptops**
 
 | Overview | Benefits | Harms |
@@ -38,4 +40,28 @@ Someone that is empowered can help someone that is not empowered by helping them
 
 **Is paper or red tape blocking digital empowerment? Are there such barriers at Del Norte? Elsewhere?**
 
-Yes, the idea that the only way to prevent the negative effects of internet is to stay off of it as well as the idea that social media is always bad are some types of red tapes blocking digital empowerment. These barriers are shown at Del Norte, as shown with the extremely restrictive access to parts of the windows pcs at school, where in reality it would be a good idea to allow students to be exposed to these security options. Elsewhere, many parents are under the impression that all social media is bad, however, if you learn to use social media properly, it isn't always bad.s
+Yes, the idea that the only way to prevent the negative effects of internet is to stay off of it as well as the idea that social media is always bad are some types of red tapes blocking digital empowerment. These barriers are shown at Del Norte, as shown with the extremely restrictive access to parts of the windows pcs at school, where in reality it would be a good idea to allow students to be exposed to these security options. Elsewhere, many parents are under the impression that all social media is bad, however, if you learn to use social media properly, it isn't always bad.
+
+# Project Approval
+
+**Think of 3 beneficial effects of your projects**
+
+1. Ease of access for connecting with other classmates
+2. A great way for students to evaluate their own position in a school
+3. Allows for educated choosing of classes for your next trimester or year.
+
+**Think of a potential harmful effect of your project**
+
+1. A possible harmful effect of my project is the insecurity you might feel if your position in the school isn't very good.
+
+**What are pros/cons on internet blockers at router and lack of admin password on lab machines at school?**
+
+| Pros | Cons |
+| --- | --- |
+| Prevents inexperienced students from messing with sensitive settings | The people who don't know about advanced settings will never know, while the people who do feel restricted |
+| Prevents students from visiting inappropriate sites or getting distracted by games | Many websites that may be useful are also blocked, such as independent blogs that may have valuable information |
+| Creates a overall more focused environment | Creates a confined environment |
+
+**What concerns do you have personally about the digital divide? For yourself or for others.**
+
+Some concerns I have for the digital divide is the restriction of opportunities for people without good laptops. I personally have a decently powerful laptop at home, however, for others this may not be true. Some people may not have a powerful enough laptop to, for example, run video editing programs. This prevents them from attending digital media classes, completely restricting them from going down a path that may have been very appealing to them. Another example is practicing red teaming or ethical hacking. As it is the best practice to run all pen testing software and exploits on a virtual machine, some laptops may not support this virtualization or may not have the power to run a machine with enough power to support a heavy virtual machine running on top of the host os.
