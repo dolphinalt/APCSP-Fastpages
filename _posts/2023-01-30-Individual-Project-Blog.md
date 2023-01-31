@@ -25,7 +25,7 @@ Create an easy way for people to share schedules and compare it against their fr
 
 ## Code Plan
 
-Create a database generator code using inspriation from Mr. Mort's code, and create an api code using inspiration from Mr. Mortensen's code. The database will follow the following format:
+Create a database generator code using inspiration from Mr. Mort's code, and create an api code using inspiration from Mr. Mortensen's code. The database will follow the following format:
 
 | Username | Full Name | Period 1 | Period 2 | Period 3 | Period 4 | Period 5 |
 | --- | --- | --- | --- | --- | --- | --- |
