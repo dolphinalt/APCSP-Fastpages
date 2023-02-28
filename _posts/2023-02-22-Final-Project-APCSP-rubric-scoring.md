@@ -7,6 +7,7 @@ title: Final Project APCSP rubric scoring
 ---
 
 # APCSP Project
+
 | Reporting Category | My Score | Reasoning |
 | --- | --- | --- |
 | Program Purpose and Function | 1 | The project has the function of providing users with a hub for different accedemic tools and resources, as well as a way to connect with other students. |
