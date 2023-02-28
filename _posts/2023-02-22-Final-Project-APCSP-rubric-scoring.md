@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: Rubric scoring
+description: Project Rubric scoring
 categories: [markdown]
 title: Final Project APCSP rubric scoring
 ---
