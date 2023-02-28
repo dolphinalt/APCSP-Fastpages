@@ -97,7 +97,7 @@ key: value
 
 ## Footnotes
 
-
-
 [^1]: This is the footnote.
+
+[^2]: the github repo is a commit behind.
 
