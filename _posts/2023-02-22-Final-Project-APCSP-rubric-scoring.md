@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: n@tm
+description: Rubric scoring
 categories: [markdown]
-title: Night at the museum blog
+title: Final Project APCSP rubric scoring
 ---
 
 # APCSP Project
