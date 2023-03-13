@@ -427,13 +427,13 @@ pre code { font-size: 15px !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
-html, body, input, textarea, select, button { color: linear-gradient(45deg, #fc0303 0%, #1ced50 100%) !important; background-color: #1a2026 !important; }
+html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.85) !important; background-color: #1a2026 !important; }
 
 a { color: #4bbaff !important; transition: all 0.3s ease-in-out; }
 
 a:hover { color: #606e7c; transform: scale(1); transform: translateY(-5px); }
 
-.site-title, .site-title:visited, .site-nav, .page-link { color: linear-gradient(45deg, #fc0303 0%, #1ced50 100%) !important; }
+.site-title, .site-title:visited, .site-nav, .page-link { color: rgba(255, 255, 255, 0.85) !important; }
 
 .site-nav { background-color: #1a2026; border-color: #3a3f44; }
 
@@ -447,11 +447,11 @@ pre, code { border-color: #3a3f44; background-color: #252b31; }
 
 .post-content p, .post-content li { color: #21282e; }
 
-.btn { background-color: #252b31 !important; color: linear-gradient(45deg, #fc0303 0%, #1ced50 100%) !important; border-color: #3a3f44 !important; }
+.btn { background-color: #252b31 !important; color: rgba(255, 255, 255, 0.85) !important; border-color: #3a3f44 !important; }
 
 .btn:hover { background-color: #1a2026 !important; }
 
-table th { background-color: #252b31; border-color: #3a3f44; color: linear-gradient(45deg, #fc0303 0%, #1ced50 100%); }
+table th { background-color: #252b31; border-color: #3a3f44; color: rgba(255, 255, 255, 0.85); }
 
 table td { background-color: #1a2026; border-color: #3a3f44; color: #21282e; }
 
