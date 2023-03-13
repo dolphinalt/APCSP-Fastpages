@@ -431,7 +431,7 @@ html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.85) !
 
 a { color: #4bbaff !important; transition: all 0.3s ease-in-out; }
 
-a:hover { color: #606e7c; transform: scale(1); transform: translateY(-5px); }
+a:hover { color: rgba(255, 255, 255, 0.85) !important; transform: scale(1); transform: translateY(-5px); }
 
 .site-title, .site-title:visited, .site-nav, .page-link { color: rgba(255, 255, 255, 0.85) !important; }
 
@@ -441,11 +441,11 @@ a:hover { color: #606e7c; transform: scale(1); transform: translateY(-5px); }
 
 pre, code { border-color: #3a3f44; background-color: #252b31; }
 
-.page-description { color: #21282e; }
+.page-description { color: rgba(255, 255, 255, 0.5); }
 
 .post-meta { color: rgba(255, 255, 255, 0.38); }
 
-.post-content p, .post-content li { color: #21282e; }
+.post-content p, .post-content li { color: rgba(255, 255, 255, 0.5); }
 
 .btn { background-color: #252b31 !important; color: rgba(255, 255, 255, 0.85) !important; border-color: #3a3f44 !important; }
 
@@ -453,7 +453,7 @@ pre, code { border-color: #3a3f44; background-color: #252b31; }
 
 table th { background-color: #252b31; border-color: #3a3f44; color: rgba(255, 255, 255, 0.85); }
 
-table td { background-color: #1a2026; border-color: #3a3f44; color: #21282e; }
+table td { background-color: #1a2026; border-color: #3a3f44; color: rgba(255, 255, 255, 0.5); }
 
 .flash { color: #1a2026 !important; filter: brightness(80%); }
 
@@ -461,7 +461,7 @@ canvas { filter: invert(100%); }
 
 .post-list > li > div { box-shadow: none !important; background-color: #252b31; border: none !important; }
 
-li .post-meta-description { color: #21282e !important; }
+li .post-meta-description { color: rgba(255, 255, 255, 0.5) !important; }
 
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
 
