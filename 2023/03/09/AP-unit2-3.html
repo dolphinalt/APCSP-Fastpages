@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      19 min read
+      23 min read
     
 </span></p>
 
@@ -147,6 +147,12 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Machine-Learning-Visit-Tutorials-Point">Machine Learning Visit Tutorials Point </a></li>
+<li class="toc-entry toc-h2"><a href="#AP-Prep">AP Prep </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Binary-Numbers-Quiz---4/6">Binary Numbers Quiz - 4/6 </a></li>
+<li class="toc-entry toc-h3"><a href="#Using-Programs-with-Data-Quiz---4/6">Using Programs with Data Quiz - 4/6 </a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul><!--
@@ -542,6 +548,81 @@ Student ID  GPA
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/winequality-red.csv'</span><span class="p">)</span>
+<span class="c1"># print(df)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>      fixed acidity  volatile acidity  citric acid  residual sugar  chlorides  \
+0               7.4             0.700         0.00             1.9      0.076   
+1               7.8             0.880         0.00             2.6      0.098   
+2               7.8             0.760         0.04             2.3      0.092   
+3              11.2             0.280         0.56             1.9      0.075   
+4               7.4             0.700         0.00             1.9      0.076   
+...             ...               ...          ...             ...        ...   
+1594            6.2             0.600         0.08             2.0      0.090   
+1595            5.9             0.550         0.10             2.2      0.062   
+1596            6.3             0.510         0.13             2.3      0.076   
+1597            5.9             0.645         0.12             2.0      0.075   
+1598            6.0             0.310         0.47             3.6      0.067   
+
+      free sulfur dioxide  total sulfur dioxide  density    pH  sulphates  \
+0                    11.0                  34.0  0.99780  3.51       0.56   
+1                    25.0                  67.0  0.99680  3.20       0.68   
+2                    15.0                  54.0  0.99700  3.26       0.65   
+3                    17.0                  60.0  0.99800  3.16       0.58   
+4                    11.0                  34.0  0.99780  3.51       0.56   
+...                   ...                   ...      ...   ...        ...   
+1594                 32.0                  44.0  0.99490  3.45       0.58   
+1595                 39.0                  51.0  0.99512  3.52       0.76   
+1596                 29.0                  40.0  0.99574  3.42       0.75   
+1597                 32.0                  44.0  0.99547  3.57       0.71   
+1598                 18.0                  42.0  0.99549  3.39       0.66   
+
+      alcohol  quality  
+0         9.4        5  
+1         9.8        5  
+2         9.8        5  
+3         9.8        6  
+4         9.4        5  
+...       ...      ...  
+1594     10.5        5  
+1595     11.2        6  
+1596     11.0        6  
+1597     10.2        5  
+1598     11.0        6  
+
+[1599 rows x 12 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -858,12 +939,12 @@ None
 <a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
 </h1>
 <blockquote>
-<p>Early Seed award</p>
+<p>Early Seed award [done]</p>
 <ul>
 <li>Add this Blog to you own Blogging site.</li>
 <li>Have all lecture files saved to your files directory before Tech Talk starts. Have data.csv open in vscode. Don't tell anyone. Show to Teacher.</li>
 </ul>
-<p>AP Prep</p>
+<p>AP Prep [done]</p>
 <ul>
 <li>Add this Blog to you own Blogging site.  In the Blog add notes and observations on each code cell.</li>
 <li>In blog add College Board practice problems for 2.3.</li>
@@ -1072,34 +1153,7 @@ Lowest 10 qualities of wine
 1299    10.90        3  
 832      9.90        3  
 
-Top 10 qualities of wine
-         fixed acidity  volatile acidity  citric acid  residual sugar  \
-quality                                                                 
-3             8.360000          0.884500     0.171000        2.635000   
-4             7.779245          0.693962     0.174151        2.694340   
-5             8.167254          0.577041     0.243686        2.528855   
-6             8.347179          0.497484     0.273824        2.477194   
-7             8.872362          0.403920     0.375176        2.720603   
-8             8.566667          0.423333     0.391111        2.577778   
-
-         chlorides  free sulfur dioxide  total sulfur dioxide   density  \
-quality                                                                   
-3         0.122500            11.000000             24.900000  0.997464   
-4         0.090679            12.264151             36.245283  0.996542   
-5         0.092736            16.983847             56.513950  0.997104   
-6         0.084956            15.711599             40.869906  0.996615   
-7         0.076588            14.045226             35.020101  0.996104   
-8         0.068444            13.277778             33.444444  0.995212   
-
-               pH  sulphates    alcohol  
-quality                                  
-3        3.398000   0.570000   9.955000  
-4        3.381509   0.596415  10.265094  
-5        3.304949   0.620969   9.899706  
-6        3.318072   0.675329  10.629519  
-7        3.290754   0.741256  11.465913  
-8        3.267222   0.767778  12.094444  
-Lowest 10 qualities of wine
+Average quality of wine
          fixed acidity  volatile acidity  citric acid  residual sugar  \
 quality                                                                 
 3             8.360000          0.884500     0.171000        2.635000   
@@ -1596,6 +1650,80 @@ Please also refer to the documentation for alternative solver options:
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="AP-Prep">
+<a class="anchor" href="#AP-Prep" aria-hidden="true"><span class="octicon octicon-link"></span></a>AP Prep<a class="anchor-link" href="#AP-Prep"> </a>
+</h2>
+<blockquote>
+<p>College Board Practice Problems for 2.3</p>
+</blockquote>
+<h3 id="Binary-Numbers-Quiz---4/6">
+<a class="anchor" href="#Binary-Numbers-Quiz---4/6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Numbers Quiz - 4/6<a class="anchor-link" href="#Binary-Numbers-Quiz---4/6"> </a>
+</h3>
+<p><strong>Q4</strong> - Consider the 4-bit binary numbers 0011, 0110, and 1111. Which of the following decimal values is NOT equal to one of these binary numbers?</p>
+<p>(A) 3 &lt;--- I picked this</p>
+<p>(B) 6</p>
+<p>(C) 9 &lt;--- Correct</p>
+<p>(D) 15</p>
+<p>0011 in decimal is 3, 0110 in decimal is 6, and 1111 in decimal is 15. Therefore, the correct answer is (C). The mistake I made was reading the decimal values starting from the left, instead of the right.</p>
+<p><strong>Q6</strong> - Consider the following numeric values.</p>
+<ul>
+<li>
+<p>Binary 1011</p>
+</li>
+<li>
+<p>Binary 1101</p>
+</li>
+<li>
+<p>Decimal 5</p>
+</li>
+<li>
+<p>Decimal 12</p>
+</li>
+</ul>
+<p>Which of the following lists the values in order from least to greatest?</p>
+<p>(A) Decimal 5, binary 1011, decimal 12, binary 1101 &lt;--- Correct</p>
+<p>(B) Decimal 5, decimal 12, binary 1011, binary 1101</p>
+<p>(C) Decimal 5, binary 1011, binary 1101, decimal 12 &lt;--- I picked this</p>
+<p>(D) Binary 1011, binary 1101, decimal 5, decimal 12</p>
+<p>Again, I made the same mistake of starting from the left instead of the right.</p>
+<h3 id="Using-Programs-with-Data-Quiz---4/6">
+<a class="anchor" href="#Using-Programs-with-Data-Quiz---4/6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using Programs with Data Quiz - 4/6<a class="anchor-link" href="#Using-Programs-with-Data-Quiz---4/6"> </a>
+</h3>
+<p><strong>Q2</strong> - The owner of a clothing store records the following information for each transaction made at the store during a 7-day period.</p>
+<ul>
+<li>
+<p>The date of the transaction</p>
+</li>
+<li>
+<p>The method of payment used in the transaction</p>
+</li>
+<li>
+<p>The number of items purchased in the transaction</p>
+</li>
+<li>
+<p>The total amount of the transaction, in dollars</p>
+</li>
+</ul>
+<p>Customers can pay for purchases using cash, check, a debit card, or a credit card.</p>
+<p>Using only the data collected during the 7-day period, which of the following statements is true?</p>
+<p>(A) The average amount spent per day during the 7-day period can be determined by sorting the data by the total transaction amount, then adding the 7 greatest amounts, and then dividing the sum by 7.</p>
+<p>(B) The method of payment that was used in the greatest number of transactions during the 7-day period can be determined by sorting the data by the method of payment, then adding the number of items purchased for each type of payment method, and then finding the maximum sum.</p>
+<p>(C) The most expensive item purchased on a given date can be determined by searching the data for all items purchased on the given date and then sorting the matching items by item price. &lt;--- I picked this</p>
+<p>(D) The total number of items purchased on a given date can be determined by searching the data for all transactions that occurred on the given date and then adding the number of items purchased for each matching transaction. &lt;--- Correct</p>
+<p>The correct answer is (D) because the total number of items purchased on a given date can be determined by searching the data for all transactions that occurred on the given date and then adding the number of items purchased for each matching transaction, while the wrong answer (C) is wrong because it doesn't take into account the costs of each individual item, only the overall cost.</p>
+<p><strong>Q3</strong> - A new rechargeable battery pack is available for products that use AA batteries. Which of the following best explains how the data files in the table can be used to send a targeted e-mail to only those customers who have purchased products that use AA batteries to let them know about the new accessory?</p>
+<p>(A) Use the customer IDs in the purchases file to search the customers file to generate a list of e-mail addresses &lt;--- I picked this</p>
+<p>(B) Use the product IDs in the purchases file to search the products file to generate a list of product names that use AA batteries</p>
+<p>(C) Use the customers file to generate a list of customer IDs, then use the list of customer IDs to search the products file to generate a list of product names that use AA batteries</p>
+<p>(D) Use the products file to generate a list of product IDs that use AA batteries, then use the list of product IDs to search the purchases file to generate a list of customer IDs, then use the list of customer IDs to search the customers file to generate a list of e-mail addresses &lt;--- Correct</p>
+<p>The correct answer is (D) because the answer choice (A) doesn't take into account which users have purchased what items, while the answer choice (D) does.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
