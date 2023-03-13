@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: Trimester 2 Final Quiz Blog
 categories: [markdown]
-title: Final Quiz Blog
+title: Trimester 2 Final Quiz Blog
 ---
 
 # APCSP Trimester 2 Final quiz blog
