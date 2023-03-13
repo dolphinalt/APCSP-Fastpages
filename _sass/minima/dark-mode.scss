@@ -1,6 +1,6 @@
 // Credits to @vunsh on github
 $high-emph: rgba(white, 0.85);
-$med-emph: #21282e;
+$med-emph: rgba(white, 0.5);
 $low-emph: rgba(white, 0.38);
 $dark-grey : #1a2026; 
 // $dark-grey : #1F1B24;
@@ -18,8 +18,8 @@ a {
 }
 
 a:hover {
-    // color:$high-emph !important;
-    color:#606e7c;
+    color:$high-emph !important;
+    // color:#606e7c;
     transform: scale(1);
     transform: translateY(-5px);
 }
