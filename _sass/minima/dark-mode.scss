@@ -1,8 +1,8 @@
 // Credits to @vunsh on github
-$high-emph: rgba(white, 0.87);
-$med-emph: rgba(white, 0.69); //Noicee
+$high-emph: linear-gradient(45deg,rgb(252, 3, 3) 0%,rgb(28, 237, 80) 100%);
+$med-emph: #21282e;
 $low-emph: rgba(white, 0.38);
-$dark-grey : #121212; 
+$dark-grey : #1a2026; 
 // $dark-grey : #1F1B24;
 $overlay: mix($dark-grey, white, 95%);
 $overlay-light: mix($dark-grey, white, 86%);
@@ -14,10 +14,14 @@ html, body, input, textarea, select, button {
 
 a {
     color: rgb(75, 186, 255) !important;
+    transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-    color:$high-emph !important;
+    // color:$high-emph !important;
+    color:#606e7c;
+    transform: scale(1);
+    transform: translateY(-5px);
 }
 
 .site-title, .site-title:visited, .site-nav, .page-link {
