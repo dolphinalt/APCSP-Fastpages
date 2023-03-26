@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      12 min read
     
 </span></p>
 
@@ -141,8 +141,16 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Notes">Notes </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Create-a-new-User-in-table-in-Sqlite.db">Create a new User in table in Sqlite.db </a></li>
-<li class="toc-entry toc-h2"><a href="#Reading-users-table-in-sqlite.db">Reading users table in sqlite.db </a></li>
+<li class="toc-entry toc-h2"><a href="#Create-a-new-User-in-table-in-Sqlite.db">Create a new User in table in Sqlite.db </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Notes">Notes </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Reading-users-table-in-sqlite.db">Reading users table in sqlite.db </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Notes">Notes </a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a></li>
@@ -671,6 +679,17 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Notes">
+<a class="anchor" href="#Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Notes</strong><a class="anchor-link" href="#Notes"> </a>
+</h3>
+<p>The above code allows for the creation of a date of birth field for users. This could be useful for things such as setting up a user profile page, or for giving birthday reminders to friends. The code also doubles as a way to check if a user already exists in the database, and if not, it will create a new user.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Reading-users-table-in-sqlite.db">
 <a class="anchor" href="#Reading-users-table-in-sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading users table in sqlite.db<a class="anchor-link" href="#Reading-users-table-in-sqlite.db"> </a>
 </h2>
@@ -712,6 +731,17 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Notes">
+<a class="anchor" href="#Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Notes</strong><a class="anchor-link" href="#Notes"> </a>
+</h3>
+<p>The read function prints out the values in the database. This could be useful for things such as a leaderboard, or for displaying a list of users.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -932,79 +962,13 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Records exist user caliocat, or error.
-Records exist user dolfin, or error.
-Records exist user Eris29, or error.
-Records exist user Shattered, or error.
-Records exist user soccerball, or error.
-Records exist user dolfin, or error.
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/_collections.py:1008</span>, in <span class="ansi-cyan-fg">ScopedRegistry.__call__</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1007</span> try:
-<span class="ansi-green-fg">-&gt; 1008</span>     return self.registry[key]
-<span class="ansi-green-intense-fg ansi-bold">   1009</span> except KeyError:
-
-<span class="ansi-red-fg">KeyError</span>: &lt;greenlet.greenlet object at 0x7fcc07991510 (otid=0x7fcc036d4cc0) current active started main&gt;
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/ethan/vscode/APCSP-Fastpages-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 16</span> in <span class="ansi-cyan-fg">&lt;cell line: 180&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell:/Users/ethan/vscode/APCSP-Fastpages-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=175'&gt;176&lt;/a&gt;</span>                 print(f"Records exist user {user.username}, or error.")
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell:/Users/ethan/vscode/APCSP-Fastpages-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=177'&gt;178&lt;/a&gt;</span> initUsers()
-<span class="ansi-green-fg">--&gt; &lt;a href='vscode-notebook-cell:/Users/ethan/vscode/APCSP-Fastpages-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=179'&gt;180&lt;/a&gt;</span> ClassDB.delete("soccerball")
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell:/Users/ethan/vscode/APCSP-Fastpages-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=180'&gt;181&lt;/a&gt;</span> ClassDB.update("dolfin","Briana West;Pre Calculus 2","Julie Cheskaty;AP Biology Seminar","John Mortensen;Data Structures 1","Yin Tzy Lin;AP Chinese Seminar","offroll;offroll")
-
-<span class="ansi-green-intense-fg ansi-bold">/Users/ethan/vscode/APCSP-Fastpages-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 16</span> in <span class="ansi-cyan-fg">ClassDB.delete</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell:/Users/ethan/vscode/APCSP-Fastpages-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=143'&gt;144&lt;/a&gt;</span> def delete(self):
-<span class="ansi-green-fg">--&gt; &lt;a href='vscode-notebook-cell:/Users/ethan/vscode/APCSP-Fastpages-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=144'&gt;145&lt;/a&gt;</span>     db.session.delete(self)
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell:/Users/ethan/vscode/APCSP-Fastpages-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=145'&gt;146&lt;/a&gt;</span>     db.session.commit()
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell:/Users/ethan/vscode/APCSP-Fastpages-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=146'&gt;147&lt;/a&gt;</span>     return None
-
-File <span class="ansi-green-fg">&lt;string&gt;:2</span>, in <span class="ansi-cyan-fg">delete</span><span class="ansi-blue-fg">(self, instance)</span>
-
-File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/scoping.py:24</span>, in <span class="ansi-cyan-fg">ScopedSessionMixin._proxied</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">     22</span> @property
-<span class="ansi-green-intense-fg ansi-bold">     23</span> def _proxied(self):
-<span class="ansi-green-fg">---&gt; 24</span>     return self.registry()
-
-File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/_collections.py:1010</span>, in <span class="ansi-cyan-fg">ScopedRegistry.__call__</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1008</span>     return self.registry[key]
-<span class="ansi-green-intense-fg ansi-bold">   1009</span> except KeyError:
-<span class="ansi-green-fg">-&gt; 1010</span>     return self.registry.setdefault(key, self.createfunc())
-
-File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:4205</span>, in <span class="ansi-cyan-fg">sessionmaker.__call__</span><span class="ansi-blue-fg">(self, **local_kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">   4203</span>     else:
-<span class="ansi-green-intense-fg ansi-bold">   4204</span>         local_kw.setdefault(k, v)
-<span class="ansi-green-fg">-&gt; 4205</span> return self.class_(**local_kw)
-
-File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/__init__.py:174</span>, in <span class="ansi-cyan-fg">SignallingSession.__init__</span><span class="ansi-blue-fg">(self, db, autocommit, autoflush, **options)</span>
-<span class="ansi-green-intense-fg ansi-bold">    172</span> def __init__(self, db, autocommit=False, autoflush=True, **options):
-<span class="ansi-green-intense-fg ansi-bold">    173</span>     #: The application that this session belongs to.
-<span class="ansi-green-fg">--&gt; 174</span>     self.app = app = db.get_app()
-<span class="ansi-green-intense-fg ansi-bold">    175</span>     track_modifications = app.config['SQLALCHEMY_TRACK_MODIFICATIONS']
-<span class="ansi-green-intense-fg ansi-bold">    176</span>     bind = options.pop('bind', None) or db.engine
-
-File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/__init__.py:1042</span>, in <span class="ansi-cyan-fg">SQLAlchemy.get_app</span><span class="ansi-blue-fg">(self, reference_app)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1039</span> if self.app is not None:
-<span class="ansi-green-intense-fg ansi-bold">   1040</span>     return self.app
-<span class="ansi-green-fg">-&gt; 1042</span> raise RuntimeError(
-<span class="ansi-green-intense-fg ansi-bold">   1043</span>     'No application found. Either work inside a view function or push'
-<span class="ansi-green-intense-fg ansi-bold">   1044</span>     ' an application context. See'
-<span class="ansi-green-intense-fg ansi-bold">   1045</span>     ' http://flask-sqlalchemy.pocoo.org/contexts/.'
-<span class="ansi-green-intense-fg ansi-bold">   1046</span> )
-
-<span class="ansi-red-fg">RuntimeError</span>: No application found. Either work inside a view function or push an application context. See http://flask-sqlalchemy.pocoo.org/contexts/.</pre>
+<span class="ansi-red-intense-fg ansi-bold">Running cells with 'c:\Users\ethan\AppData\Local\Programs\Python\Python311\python.exe' requires the ipykernel package.
+</span>
+<span class="ansi-red-intense-fg ansi-bold">Run the following command to install 'ipykernel' into the Python environment. 
+</span>
+<span class="ansi-red-intense-fg ansi-bold">Command: 'c:/Users/ethan/AppData/Local/Programs/Python/Python311/python.exe -m pip install ipykernel -U --user --force-reinstall'</span></pre>
 </div>
 </div>
 
