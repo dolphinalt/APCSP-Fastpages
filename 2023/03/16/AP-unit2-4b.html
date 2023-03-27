@@ -274,6 +274,34 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 24</span>
+<span class="ansi-green-intense-fg ansi-bold">     21</span>     cursor.close()
+<span class="ansi-green-intense-fg ansi-bold">     22</span>     conn.close()
+<span class="ansi-green-fg">---&gt; 24</span> read()
+
+Cell <span class="ansi-green-fg">In[2], line 11</span>, in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> cursor = conn.cursor()
+<span class="ansi-green-intense-fg ansi-bold">     10</span> # Execute a SELECT statement to retrieve data from a table
+<span class="ansi-green-fg">---&gt; 11</span> results = cursor.execute('SELECT * FROM users').fetchall()
+<span class="ansi-green-intense-fg ansi-bold">     13</span> # Print the results
+<span class="ansi-green-intense-fg ansi-bold">     14</span> if len(results) == 0:
+
+<span class="ansi-red-fg">OperationalError</span>: no such table: users</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
