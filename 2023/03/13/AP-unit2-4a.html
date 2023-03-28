@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      14 min read
     
 </span></p>
 
@@ -900,8 +900,10 @@ window.onload = wrap_img;
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
         <span class="k">return</span> <span class="kc">None</span>
     
-<span class="sd">"""Database Creation and Testing """</span>
-
+<span class="k">def</span> <span class="nf">find_by_username</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">ClassDB</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">_username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">user</span> <span class="c1"># returns user object</span>
 
 <span class="c1"># Builds working data for testing</span>
 <span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
@@ -937,33 +939,41 @@ window.onload = wrap_img;
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter username:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p1class</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 1 class:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p1teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 1 teacher:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p2class</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 2 class:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p2teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 2 teacher:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p3class</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 3 class:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p3teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 3 teacher:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p4class</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 4 class:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p4teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 4 teacher:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p5class</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 5 class:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p5teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 5 teacher:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">p1</span> <span class="o">=</span> <span class="n">p1teach</span> <span class="o">+</span> <span class="s2">";"</span> <span class="o">+</span> <span class="n">p1class</span>
-    <span class="n">p2</span> <span class="o">=</span> <span class="n">p2teach</span> <span class="o">+</span> <span class="s2">";"</span> <span class="o">+</span> <span class="n">p2class</span>
-    <span class="n">p3</span> <span class="o">=</span> <span class="n">p3teach</span> <span class="o">+</span> <span class="s2">";"</span> <span class="o">+</span> <span class="n">p3class</span>
-    <span class="n">p4</span> <span class="o">=</span> <span class="n">p4teach</span> <span class="o">+</span> <span class="s2">";"</span> <span class="o">+</span> <span class="n">p4class</span>
-    <span class="n">p5</span> <span class="o">=</span> <span class="n">p5teach</span> <span class="o">+</span> <span class="s2">";"</span> <span class="o">+</span> <span class="n">p5class</span>
-    <span class="n">ClassDB</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="o">=</span><span class="n">p3</span><span class="p">,</span> <span class="n">p4</span><span class="o">=</span><span class="n">p4</span><span class="p">,</span> <span class="n">p5</span><span class="o">=</span><span class="n">p5</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">find_by_username</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+        <span class="n">p1class</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 1 class:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">p1teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 1 teacher:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">p2class</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 2 class:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">p2teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 2 teacher:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">p3class</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 3 class:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">p3teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 3 teacher:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">p4class</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 4 class:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">p4teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 4 teacher:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">p5class</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 5 class:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">p5teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Period 5 teacher:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">p1teach</span> <span class="o">+</span> <span class="s2">";"</span> <span class="o">+</span> <span class="n">p1class</span>
+        <span class="n">p2</span> <span class="o">=</span> <span class="n">p2teach</span> <span class="o">+</span> <span class="s2">";"</span> <span class="o">+</span> <span class="n">p2class</span>
+        <span class="n">p3</span> <span class="o">=</span> <span class="n">p3teach</span> <span class="o">+</span> <span class="s2">";"</span> <span class="o">+</span> <span class="n">p3class</span>
+        <span class="n">p4</span> <span class="o">=</span> <span class="n">p4teach</span> <span class="o">+</span> <span class="s2">";"</span> <span class="o">+</span> <span class="n">p4class</span>
+        <span class="n">p5</span> <span class="o">=</span> <span class="n">p5teach</span> <span class="o">+</span> <span class="s2">";"</span> <span class="o">+</span> <span class="n">p5class</span>
+        <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+            <span class="n">u1</span> <span class="o">=</span> <span class="n">ClassDB</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="o">=</span><span class="n">p3</span><span class="p">,</span> <span class="n">p4</span><span class="o">=</span><span class="n">p4</span><span class="p">,</span> <span class="n">p5</span><span class="o">=</span><span class="n">p5</span><span class="p">)</span>
+            <span class="nb">object</span> <span class="o">=</span> <span class="n">ClassDB</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">u1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"User </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2"> not found"</span><span class="p">)</span>
                 
 <span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
     <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter username:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
-        <span class="n">ClassDB</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Deleted user </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">find_by_username</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">find_by_username</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+            <span class="nb">object</span> <span class="o">=</span> <span class="n">ClassDB</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Deleted user </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"User </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2"> not found"</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
     <span class="n">method</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter method: [C, R, U, D] (q to exit)</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">method</span><span class="o">.</span><span class="n">lower</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">method</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'c'</span><span class="p">:</span>
         <span class="n">create</span><span class="p">()</span>
     <span class="k">elif</span> <span class="n">method</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'r'</span><span class="p">:</span>
@@ -982,6 +992,28 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>User caliocat has teacher;period in period 1, teacher;period in period 2, teacher;period in period 3, teacher;period in period 4, and teacher;period in period 5
+User dolfin has teacher;class in period 1, teacher;class in period 2, teacher;class in period 3, teacher;class in period 4, and teacher;class in period 5
+Created new user new
+User caliocat has teacher;period in period 1, teacher;period in period 2, teacher;period in period 3, teacher;period in period 4, and teacher;period in period 5
+User dolfin has teacher;class in period 1, teacher;class in period 2, teacher;class in period 3, teacher;class in period 4, and teacher;class in period 5
+User new has class;class in period 1, class;class in period 2, class;class in period 3, class;class in period 4, and class;class in period 5
+Deleted user new
+User caliocat has teacher;period in period 1, teacher;period in period 2, teacher;period in period 3, teacher;period in period 4, and teacher;period in period 5
+User dolfin has teacher;class in period 1, teacher;class in period 2, teacher;class in period 3, teacher;class in period 4, and teacher;class in period 5
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
