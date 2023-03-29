@@ -24,7 +24,7 @@ title: Extra Credit
     - How to find
         - Check emails, go to campus events
     - avoid unpaid internships, go for paid
-    - apply even if you feel underqualified
+    - apply even if you feel unqualified
     - always ask for help
     - Summer interns ar good, peaks interest/allows for payment
     - Programs:
