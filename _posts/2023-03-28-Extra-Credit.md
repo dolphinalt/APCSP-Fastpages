@@ -5,7 +5,7 @@ description: Extra Credit
 categories: [markdown]
 title: Extra Credit
 ---
-
+ 
 # General
 - Ambassadors from Cal State San Marcos
 - They have many past failures, but they still end up succeeding
