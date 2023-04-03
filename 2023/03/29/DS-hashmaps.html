@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -655,6 +655,103 @@ Invalid Search
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">HeroesandVilians_album</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Heroes and Vilians"</span><span class="p">,</span>
+    <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Metro Boomin"</span><span class="p">,</span>
+    <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2022</span><span class="p">,</span>
+    <span class="s2">"genre"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Rap"</span><span class="p">],</span>
+    <span class="s2">"tracks"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">"On Time"</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">"Superhero"</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">"Too Many Nights"</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">"Raindrops (Insane)"</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">"Umbrella"</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">"Trance"</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">"Around Me"</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">"Metro Spider"</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">"I Cant Save You (Interlude)"</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">"Creepin"</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">"Niagra Falls (Foot or 2)"</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s2">"Walk Em Down (Don't Kill Civilians)"</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s2">"Lock On Me"</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="s2">"Feel the Fiyaaah"</span><span class="p">,</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="s2">"All The Money"</span>
+    <span class="p">},</span>
+    <span class="s2">"producer"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Metro Boomin"</span><span class="p">,</span> <span class="s2">"Travis Scott"</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">HeroesandVilians_album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s1">'title'</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="s1">'artist'</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="s1">'year'</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="s1">'genre'</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"s: "</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">genre</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">genre</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="s1">'tracks'</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">track</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">track</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">track</span><span class="p">]))</span>
+    <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="s1">'producer'</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"s: "</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">producer</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">producer</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>title: Heroes and Vilians
+artist: Metro Boomin
+year: 2022
+genres: 
+Rap
+tracks: 
+1: On Time
+2: Superhero
+3: Too Many Nights
+4: Raindrops (Insane)
+5: Umbrella
+6: Trance
+7: Around Me
+8: Metro Spider
+9: I Cant Save You (Interlude)
+10: Creepin
+11: Niagra Falls (Foot or 2)
+12: Walk Em Down (Don't Kill Civilians)
+13: Lock On Me
+14: Feel the Fiyaaah
+15: All The Money
+producers: 
+Metro Boomin
+Travis Scott
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
