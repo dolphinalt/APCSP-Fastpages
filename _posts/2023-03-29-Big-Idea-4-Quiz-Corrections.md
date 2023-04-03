@@ -1,12 +1,12 @@
 ---
 toc: true
 layout: post
-description: Big Idea 2 Quiz Corrections
+description: Big Idea 4 Quiz Corrections
 categories: [markdown]
-title: Big Idea 2 Quiz Corrections
+title: Big Idea 4 Quiz Corrections
 ---
 
-# APCSP Big Idea 2 Quiz Corrections
+# APCSP Big Idea 4 Quiz Corrections
 ## Total score: 38/50
 
 ### Q2:
