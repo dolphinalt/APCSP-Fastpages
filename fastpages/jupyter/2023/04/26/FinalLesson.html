@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Frontend and Backend Development with Big Idea 1 Review | Ethan’s Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Frontend and Backend Development with Big Idea 1 Review" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://dolphinalt.github.io/APCSP-Fastpages/fastpages/jupyter/2023/04/26/FinalLesson.html" />
+<meta property="og:url" content="https://dolphinalt.github.io/APCSP-Fastpages/fastpages/jupyter/2023/04/26/FinalLesson.html" />
+<meta property="og:site_name" content="Ethan’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-26T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Frontend and Backend Development with Big Idea 1 Review" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-26T00:00:00-05:00","datePublished":"2023-04-26T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Frontend and Backend Development with Big Idea 1 Review","mainEntityOfPage":{"@type":"WebPage","@id":"https://dolphinalt.github.io/APCSP-Fastpages/fastpages/jupyter/2023/04/26/FinalLesson.html"},"url":"https://dolphinalt.github.io/APCSP-Fastpages/fastpages/jupyter/2023/04/26/FinalLesson.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/APCSP-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dolphinalt.github.io/APCSP-Fastpages/feed.xml" title="Ethan's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/APCSP-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/APCSP-Fastpages/">Ethan&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/APCSP-Fastpages/about/">About Me</a><a class="page-link" href="/APCSP-Fastpages/search/">Search</a><a class="page-link" href="/APCSP-Fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Frontend and Backend Development with Big Idea 1 Review</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-26T00:00:00-05:00" itemprop="datePublished">
+        Apr 26, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      16 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/APCSP-Fastpages/categories/#fastpages">fastpages</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/APCSP-Fastpages/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/dolphinalt/APCSP-Fastpages/tree/master/_notebooks/2023-04-26-FinalLesson.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/APCSP-Fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/dolphinalt/APCSP-Fastpages/master?filepath=_notebooks%2F2023-04-26-FinalLesson.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/APCSP-Fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/dolphinalt/APCSP-Fastpages/blob/master/_notebooks/2023-04-26-FinalLesson.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/APCSP-Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fdolphinalt%2FAPCSP-Fastpages%2Fblob%2Fmaster%2F_notebooks%2F2023-04-26-FinalLesson.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/APCSP-Fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Installing-Scripts-Lesson">Installing Scripts Lesson </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#For-Windows">For Windows </a></li>
+<li class="toc-entry toc-h3"><a href="#For-MacOS">For MacOS </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Setting-up-GitHub-Pages-with-FastPages-Features">Setting up GitHub Pages with FastPages Features </a></li>
+<li class="toc-entry toc-h2"><a href="#How-to-Make-a-Pull-Request">How to Make a Pull Request </a></li>
+<li class="toc-entry toc-h2"><a href="#Fetching">Fetching </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#The-Basics">The Basics </a></li>
+<li class="toc-entry toc-h3"><a href="#About-Fetching">About Fetching </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Method">Method </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Filtering-Data">Filtering Data </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Third-Party-APIs">Third Party APIs </a></li>
+<li class="toc-entry toc-h2"><a href="#Pandas">Pandas </a></li>
+<li class="toc-entry toc-h2"><a href="#Python-(Request)-Fetch">Python (Request) Fetch </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Example-with-Weather-API">Example with Weather API </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Hacks-and-Point-Division">Hacks and Point Division </a></li>
+<li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Screenshot-showing-proof-that-conda-is-installed-(.1)">Screenshot showing proof that conda is installed (.1) </a></li>
+<li class="toc-entry toc-h2"><a href="#Create-3-quiz-eustions-to-demonstrate-the-main-steps-in-creating-a-repository-on-github-(.1)">Create 3 quiz eustions to demonstrate the main steps in creating a repository on github (.1) </a></li>
+<li class="toc-entry toc-h2"><a href="#Fetch-from-a-third-party-API,-and-display-json-data.-Then-use-the-json-data-in-any-simple-JavaScript-function-(hint:-parse,-this-makes-json-data-into-a-JavaScript-object)-(.4)">Fetch from a third party API, and display json data. Then use the json data in any simple JavaScript function (hint: parse, this makes json data into a JavaScript object) (.4) </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-26-FinalLesson.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Installing-Scripts-Lesson">
+<a class="anchor" href="#Installing-Scripts-Lesson" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing Scripts Lesson<a class="anchor-link" href="#Installing-Scripts-Lesson"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-Windows">
+<a class="anchor" href="#For-Windows" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Windows<a class="anchor-link" href="#For-Windows"> </a>
+</h3>
+<p>After you've installed VSCode using WSL, install Anaconda on WSL.</p>
+<p>Anaconda is like a big tool box for your computer, it has tools and libraries that you might need for data analysis, programming, and computing. Anaconda Python packages include pandas, numpy, sqlite, jupyter, bash, and other kernels. Conda is a tool that helps you manage these tools inside Anaconda. It lets you install, update, delete, and organize packages and materials. Conda script tells Conda what tools and materials you need and how to install them in your Anaconda toolbox.</p>
+<p><img src="https://github.com/kayleehou/myproject/blob/master/images/condadiagram.PNG?raw=true" alt="conda image"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Type these commands in powershell or terminal</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">UserName</span><span class="o">&gt;</span> <span class="n">wsl</span>  <span class="c1"># Windows prompt to WSL command</span>
+<span class="err">$</span> <span class="n">cd</span> <span class="o">/</span><span class="n">tmp</span> <span class="c1"># used to store temporary files </span>
+<span class="err">$</span> <span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">anaconda</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">Anaconda3</span><span class="o">-</span><span class="mf">2023.03</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span> <span class="c1"># downloadable file</span>
+<span class="err">$</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Anaconda3</span><span class="o">-</span><span class="mf">2022.05</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span> <span class="c1"># chmod (change mode command) changes permissions for a file or directory </span>
+<span class="c1"># Answer yes to all the prompts</span>
+<span class="err">$</span> <span class="o">./</span><span class="n">Anaconda3</span><span class="o">-</span><span class="mf">2022.05</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Start a new WSL Command or Powershell. Now the WSL prompt should be prefixed with (base) from Anaconda install. If not, go back to Anaconda install. The base prefix indicates that you are running inside the conda/anaconda environment. The command "conda deactivate" should bring you back.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">ShayM</span><span class="o">&gt;</span> <span class="n">wsl</span>  <span class="c1"># Windows prompt</span>
+<span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">shay</span><span class="nd">@MSI</span><span class="p">:</span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">ShayM</span><span class="err">$</span> <span class="n">cd</span> <span class="o">~</span> <span class="c1"># WSL prompt</span>
+<span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">shay</span><span class="nd">@MSI</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> <span class="c1"># WSL home, best place to install files</span>
+
+<span class="c1"># you can check your conda versions</span>
+<span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="nb">id</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> <span class="n">conda</span> <span class="o">--</span><span class="n">version</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://github.com/kayleehou/myproject/blob/master/images/condaimage2.PNG?raw=true" alt="command prompt view"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-MacOS">
+<a class="anchor" href="#For-MacOS" aria-hidden="true"><span class="octicon octicon-link"></span></a>For MacOS<a class="anchor-link" href="#For-MacOS"> </a>
+</h3>
+<blockquote>
+<p>Python2 install on MacOS</p>
+<ul>
+<li>Install <a href="https://www.python.org/ftp/python/2.7.18/python-2.7.18-macosx10.9.pkg">Python2</a>&gt; VSCode install on MacOS.  </li>
+<li>Install <a href="https://code.visualstudio.com/docs/setup/mac">VSCode</a>&gt; Anaconda install on MacOS.</li>
+<li>Download for MacOS:<a href="https://www.anaconda.com/products/distribution">Anaconda</a>- Run Install: Answer yes to questions
+Homebrew install on MacOS</li>
+<li>Homebrew is a tool that helps you easily install and manage software on your Mac. Think of it like a virtual store for your computer where you can browse, download and install a variety of useful programs and tools.</li>
+<li>Copy and Paste to Install from Terminal <a href="https://brew.sh">Homebrew</a>    - Copy <code>bash ... curl ...</code>  command using copy box on website<ul>
+<li>Launch <code>terminal</code> from search bar</li>
+<li>Paste <code>bash ... curl ...</code> command into Terminal ... </li>
+<li>Make sure command starts, this should provide feedback/output in terminal and could take a long time, like 10-min, there could be a prompt in the middle, at about 5-minutes.  Follow any on screen instructions provided in terminal output to finish.</li>
+</ul>
+</li>
+<li>Homebrew installs a tool called "brew" which helps add and manage developer packages on MacOS. </li>
+</ul>
+</blockquote>
+<p>Start a new WSL terminal. Now the terminal prompt should be prefixed with (base) from Anaconda install. If not, go back to Anaconda install.</p>
+<blockquote>
+<p>Having Homebrew and Anaconda allows you to easily install Key Packages needed on MacOS like the commands below are all neccessary:```bash$ brew list # list packages
+$ brew update # update package list
+$ brew upgrade # upgrade packages
+$ brew install git  # install latest git
+$ brew install python # install python3 for development
+$ python --version # version of python3 installed
+$ brew install java # openjdk install</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Hacks: Screen shot that you have conda installed  </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Setting-up-GitHub-Pages-with-FastPages-Features">
+<a class="anchor" href="#Setting-up-GitHub-Pages-with-FastPages-Features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up GitHub Pages with FastPages Features<a class="anchor-link" href="#Setting-up-GitHub-Pages-with-FastPages-Features"> </a>
+</h2>
+<p>All of you have created your own repository before at the beginning of the year, but some things have changed in the process.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Duplicate APCSP, and use it as template for your own repo</li>
+</ol>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/gnr1.png" alt=""></p>
+<ol>
+<li>Name your repo and include all branches before clicking the green create button.</li>
+</ol>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/gnr2.png" alt=""></p>
+<ol>
+<li>If you have an automatically generated pull request, then go ahead and follow the instructions on there. If there is no pull request, as shown below, then move on to step 4.</li>
+</ol>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/gnr3.png" alt=""></p>
+<ol>
+<li>Navigate to <a href="https://8gwifi.org/sshfunctions.jsp">this link</a>. Select: RSA and 4096 and leave Passphrase blank. Click the blue button Generate-SSH-Keys. You have just created an ssh key-pair.</li>
+</ol>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/gnr4.png" alt=""></p>
+<ol>
+<li>Navigate to this link. Replace the section of the link "yourrepositoryname" with your repository name. In the picture, I have inputted “ourshiny,” because it is my repository name. Replace the section of the link "yourgithubname" with your repository name that you just made.
+ <a href="https://github.com/yourgithubname/yourrepositoryname/settings/secrets/actions">https://github.com/yourgithubname/yourrepositoryname/settings/secrets/actions</a>
+</li>
+</ol>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/gnr5.png" alt=""></p>
+<ol>
+<li>Click New repository secret. Copy and paste the Private Key (generated in step 4) into the Value field. This includes the "---BEGIN RSA PRIVATE KEY---" and "--END RSA PRIVATE KEY---" portions. In the Name field, name the secret SSH_DEPLOY_KEY. Once done, click the green Add Secret button.</li>
+</ol>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/gnr6.png" alt=""></p>
+<ol>
+<li>Navigate to this link, then replace the portions below with your github and repository names. My github name in the image below is jiya-sav, and my repository name is ourshiny.
+ <a href="https://github.com/yourgithubname/yourrepositoryname/settings/keys">https://github.com/yourgithubname/yourrepositoryname/settings/keys</a>
+</li>
+</ol>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/gnr7.png" alt=""></p>
+<ol>
+<li>Click the Add deploy key button. Paste your Public Key (generated in step 4) into the Key box. In the Title, name the key anything you want, for example fastpages-key. Finally, make sure you click the checkbox next to Allow write access (pictured below), and click the green Add key button to save the key.</li>
+</ol>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/gnr8.png" alt=""></p>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/gnr9.png" alt=""></p>
+<ol>
+<li>GitHub Actions will build your site, which will take 2-3 minutes to complete. This will happen anytime you push changes to the master branch of your repository. You can monitor the logs of this if you like on the Actions tab of your repo.
+Your GH-Pages Status badge on your README will eventually appear and be green, indicating your first successful build.
+You can monitor the status of your site in the GitHub Pages section of your repository settings.</li>
+</ol>
+<p>Now that you have made your repository secure, you can clone it into vscode and CODE, CODE, CODE!!!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-to-Make-a-Pull-Request">
+<a class="anchor" href="#How-to-Make-a-Pull-Request" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Make a Pull Request<a class="anchor-link" href="#How-to-Make-a-Pull-Request"> </a>
+</h2>
+<ol>
+<li>
+<p>After you've cloned a repository and made changes to it, go to pull requests in your Github repository 
+<img src="https://github.com/kayleehou/myproject/blob/master/images/pull_request1.PNG?raw=true" alt="pull request 1"></p>
+</li>
+<li>
+<p>Once you click 'create new pull request,' you should see this with your new changes: 
+<img src="https://github.com/kayleehou/myproject/blob/master/images/pull_request2.PNG?raw=true" alt="pull request 2"></p>
+</li>
+<li>
+<p>Change the title and send the pull request 
+<img src="https://github.com/kayleehou/myproject/blob/master/images/pull_request3.PNG?raw=true" alt="pull request 3"></p>
+</li>
+</ol>
+<ul>
+<li>Hacks: You will be turning in all your hacks as a pull request. Title the pull request as shown in the third step but with your own name. Any other titles will not be accepted. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fetching">
+<a class="anchor" href="#Fetching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fetching<a class="anchor-link" href="#Fetching"> </a>
+</h2>
+<h3 id="The-Basics">
+<a class="anchor" href="#The-Basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Basics<a class="anchor-link" href="#The-Basics"> </a>
+</h3>
+<ul>
+<li>Fetching means getting data from somewhere else, like a website or database.</li>
+</ul>
+<p>JavaScript is a programming language that can be used to fetch data from a website or database.</p>
+<ul>
+<li>When you fetch data with JavaScript, you first need to tell it where to get the data from. This is called the URL.</li>
+<li>Once you know the URL, you can use JavaScript to go and get the data from that URL.</li>
+<li>When the data comes back, it's usually in a format like text or JSON. This means that you might need to do some additional work to turn the data into something that your website or application can use.</li>
+<li>Once you have the data, you can use JavaScript to display it on your website or application. You can put it in a table, show it on a map, or do anything else you can think of.</li>
+</ul>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/frontback.png" alt=""></p>
+<h3 id="About-Fetching">
+<a class="anchor" href="#About-Fetching" aria-hidden="true"><span class="octicon octicon-link"></span></a>About Fetching<a class="anchor-link" href="#About-Fetching"> </a>
+</h3>
+<h4 id="Method">
+<a class="anchor" href="#Method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Method<a class="anchor-link" href="#Method"> </a>
+</h4>
+<p>The fetching methods are in line with the CRUD (Create, Read, Update, Delete), and list as follows:</p>
+<ul>
+<li>"GET": Probably the most common method you would use, which is in line with "read". It essentially "gets" the information from the API and brings it to the frontend where you are able to display it and read it.</li>
+<li>"POST": Lines up with "create" and adds a resource to the API. You will probably mostly be using this with your own API or if a website adds your input to an API.</li>
+<li>"PUT" and "PATCH": Essentially the "update" for API. Use "PUT" if you want to change the whole resource, or "PATCH" if you want to change just one part of a resource.</li>
+<li>"DELETE": Exactly how it sounds, deletes a resource from the API</li>
+</ul>
+<p>Popcorn Hacks:</p>
+<ul>
+<li>What method should I use if I want to display some of the data stored in the backend?</li>
+</ul>
+<p>GET</p>
+<ul>
+<li>What method would I use if something in the data is misspelled and I want to fix it real quick?</li>
+</ul>
+<p>PUT</p>
+<ul>
+<li>What method should I use if I want to add a new entry to the data?</li>
+</ul>
+<p>POST</p>
+<h3 id="Filtering-Data">
+<a class="anchor" href="#Filtering-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Filtering Data<a class="anchor-link" href="#Filtering-Data"> </a>
+</h3>
+<ul>
+<li>If we want to display API data, we are going to have to filter what we want to display for multiple reasons<ul>
+<li>These include making sure that the user only sees information they need to see, and not anything else</li>
+<li>Also we need to present the information in a readable format instead of just seeing the raw data</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The below code segment, is from a previous project. It shows the use of a url being fetched, and the JavaScript fetch() command being implemented.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">prepare</span> <span class="n">fetch</span> <span class="n">urls</span>
+  <span class="o">//</span> <span class="n">const</span> <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://ssjn.nighthawkcodescrums.gq/api/song"</span><span class="p">;</span>
+  <span class="n">const</span> <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://ssjncpt.duckdns.org/api/song"</span><span class="p">;</span>
+  <span class="n">const</span> <span class="n">sad_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/sad/"</span><span class="p">;</span>  <span class="o">//</span> <span class="n">sad</span> <span class="n">category</span>
+  <span class="n">const</span> <span class="n">happy_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/happy/"</span><span class="p">;</span>  <span class="o">//</span> <span class="n">happy</span> <span class="n">category</span>
+  <span class="n">const</span> <span class="n">rage_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/rage/"</span><span class="p">;</span>  <span class="o">//</span> <span class="n">rage</span> <span class="n">category</span>
+  <span class="n">const</span> <span class="n">indian_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/indian/"</span><span class="p">;</span> <span class="o">//</span> <span class="n">indian</span> <span class="n">category</span>
+
+  <span class="o">//</span> <span class="n">prepare</span> <span class="n">fetch</span> <span class="n">GET</span> <span class="n">options</span>
+  <span class="n">const</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span> <span class="o">//</span> <span class="o">*</span><span class="n">GET</span><span class="p">,</span> <span class="n">POST</span><span class="p">,</span> <span class="n">PUT</span><span class="p">,</span> <span class="n">DELETE</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
+    <span class="n">mode</span><span class="p">:</span> <span class="s1">'cors'</span><span class="p">,</span> <span class="o">//</span> <span class="n">cors</span><span class="p">,</span> <span class="o">*</span><span class="n">cors</span><span class="p">,</span> <span class="n">same</span><span class="o">-</span><span class="n">origin</span>
+    <span class="n">cache</span><span class="p">:</span> <span class="s1">'default'</span><span class="p">,</span> <span class="o">//</span> <span class="o">*</span><span class="n">default</span><span class="p">,</span> <span class="n">no</span><span class="o">-</span><span class="n">cache</span><span class="p">,</span> <span class="n">reload</span><span class="p">,</span> <span class="n">force</span><span class="o">-</span><span class="n">cache</span><span class="p">,</span> <span class="n">only</span><span class="o">-</span><span class="k">if</span><span class="o">-</span><span class="n">cached</span>
+    <span class="n">credentials</span><span class="p">:</span> <span class="s1">'omit'</span><span class="p">,</span> <span class="o">//</span> <span class="n">include</span><span class="p">,</span> <span class="o">*</span><span class="n">same</span><span class="o">-</span><span class="n">origin</span><span class="p">,</span> <span class="n">omit</span>
+    <span class="n">headers</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'application/json'</span>
+      <span class="o">//</span> <span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'application/x-www-form-urlencoded'</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">};</span>
+  <span class="o">//</span> <span class="n">prepare</span> <span class="n">fetch</span> <span class="n">PUT</span> <span class="n">options</span><span class="p">,</span> <span class="n">clones</span> <span class="k">with</span> <span class="n">JS</span> <span class="n">Spread</span> <span class="n">Operator</span> <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+  <span class="n">const</span> <span class="n">put_options</span> <span class="o">=</span> <span class="p">{</span><span class="o">...</span><span class="n">options</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="s1">'PUT'</span><span class="p">};</span> <span class="o">//</span> <span class="n">clones</span> <span class="ow">and</span> <span class="n">replaces</span> <span class="n">method</span>
+
+  <span class="o">//</span> <span class="n">fetch</span> <span class="n">the</span> <span class="n">API</span>
+  <span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+    <span class="o">//</span> <span class="n">response</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">RESTful</span> <span class="s2">"promise"</span> <span class="n">on</span> <span class="nb">any</span> <span class="n">successful</span> <span class="n">fetch</span>
+    <span class="o">.</span><span class="n">then</span><span class="p">(</span><span class="n">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="o">//</span> <span class="n">check</span> <span class="k">for</span> <span class="n">response</span> <span class="n">errors</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">!==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">error</span><span class="p">(</span><span class="s1">'GET API response failure: '</span> <span class="o">+</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">);</span>
+          <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="o">//</span> <span class="n">valid</span> <span class="n">response</span> <span class="n">will</span> <span class="n">have</span> <span class="n">JSON</span> <span class="n">data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Third-Party-APIs">
+<a class="anchor" href="#Third-Party-APIs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Third Party APIs<a class="anchor-link" href="#Third-Party-APIs"> </a>
+</h2>
+<ul>
+<li>
+<p>APIs provided by other developers for public use.</p>
+</li>
+<li>
+<p>Programmers can use the content of these APIs to create new functionalities for their programs, or they can also simply take advantage of the data of the API for different uses.</p>
+<ul>
+<li>
+<p>Ex: A developed can use Google Account login to allow users to log in with their google account</p>
+</li>
+<li>
+<p>Ex: Using the content of a weather API to make a weather app</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The functionalities of these APIs are usually accessed via JavaScript (usually) as you’ve seen before in your past projects.</p>
+</li>
+<li>
+<p>3rd party APIs are located on third party servers. To access them from JavaScript you first need to connect to the API functionality and make it available on your page.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">"https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"</span> <span class="n">defer</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span>  <span class="n">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span>  <span class="n">href</span><span class="o">=</span><span class="s2">"https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"</span> <span class="o">/&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Here is an example of accessing the objects available in the library above.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">const</span> <span class="nb">map</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">mapquest</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s1">'map'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="n">center</span><span class="p">:</span> <span class="p">[</span><span class="mf">53.480759</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.242631</span><span class="p">],</span>
+    <span class="n">layers</span><span class="p">:</span> <span class="n">L</span><span class="o">.</span><span class="n">mapquest</span><span class="o">.</span><span class="n">tileLayer</span><span class="p">(</span><span class="s1">'map'</span><span class="p">),</span>
+    <span class="n">zoom</span><span class="p">:</span> <span class="mi">12</span>
+  <span class="p">});</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>The process of accessing and using third-party APIs can vary depending on the specific API and the requirements set by the API provider.
+3rd party APIs use developer keys to allow developers access to the API functionality, which protects the owner of the API.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L</span><span class="o">.</span><span class="n">mapquest</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="s1">'YOUR-API-KEY-HERE'</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Developers must apply to get the key of a certain API, and then include it in their code to be allowed access to the API's functionality.
+Some API keys are accessed slightly differently, but the method is similar for the most part.</li>
+</ul>
+<p>Put the link of a 3rd party API you have or will use below?</p>
+<p>Weather App Project: <a href="https://github.com/dolphinalt/Weather-App">https://github.com/dolphinalt/Weather-App</a></p>
+<p>API url: <a href="https://visual-crossing-weather.p.rapidapi.com/forecast">https://visual-crossing-weather.p.rapidapi.com/forecast</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pandas">
+<a class="anchor" href="#Pandas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pandas<a class="anchor-link" href="#Pandas"> </a>
+</h2>
+<p>While 3rd party APIs give you access to a plethora of data you may have not been able to include using a completely new self-made database, pandas can help you organize and utlize this data.</p>
+<p>Pandas is an open-source library that allows for the manipulation and analysis of numerical data, which is vital in real-life applications.</p>
+<p>We have used this in the song recommendation program we are currently developing. The use of pandas allows us to take the csv file we obtained from a third party and display it in a format we can manipulate and analyze.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/songdata'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">songdata</span><span class="p">():</span>
+    <span class="c1"># Path to the CSV file</span>
+    <span class="n">csv_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">static_folder</span><span class="p">,</span> <span class="s1">'songdata.csv'</span><span class="p">)</span>
+
+    <span class="c1"># Read the CSV file into a pandas dataframe</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
+
+    <span class="c1"># Render the dataframe as an HTML table using Jinja2</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'songdata.html'</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is how the dataframe will appear on our flask:</p>
+<p><img src="/APCSP-Fastpages/images/copied_from_nb/images/localpand.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python-(Request)-Fetch">
+<a class="anchor" href="#Python-(Request)-Fetch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python (Request) Fetch<a class="anchor-link" href="#Python-(Request)-Fetch"> </a>
+</h2>
+<h3 id="Example-with-Weather-API">
+<a class="anchor" href="#Example-with-Weather-API" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example with Weather API<a class="anchor-link" href="#Example-with-Weather-API"> </a>
+</h3>
+<ul>
+<li>What method is being used in these cells?</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://yahoo-weather5.p.rapidapi.com/weather"</span>
+
+<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"location"</span><span class="p">:</span><span class="s2">"San Diego"</span><span class="p">,</span><span class="s2">"format"</span><span class="p">:</span><span class="s2">"json"</span><span class="p">,</span><span class="s2">"u"</span><span class="p">:</span><span class="s2">"f"</span><span class="p">}</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"4abcb54450msh7468dfd72294e89p18fbaajsn6d4200063b39"</span><span class="p">,</span>
+	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"yahoo-weather5.p.rapidapi.com"</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'location': {'city': 'San Diego', 'woeid': 2487889, 'country': 'United States', 'lat': 32.831699, 'long': -117.122002, 'timezone_id': 'America/Los_Angeles'}, 'current_observation': {'pubDate': 1682463385, 'wind': {'chill': 64, 'direction': 'WSW', 'speed': 9}, 'atmosphere': {'humidity': 65, 'visibility': 10, 'pressure': 1012.5}, 'astronomy': {'sunrise': '6:08 AM', 'sunset': '7:26 PM'}, 'condition': {'temperature': 65, 'text': 'Mostly Cloudy', 'code': 28}}, 'forecasts': [{'day': 'Tue', 'date': 1682438400, 'high': 67, 'low': 55, 'text': 'Mostly Clear', 'code': 33}, {'day': 'Wed', 'date': 1682524800, 'high': 73, 'low': 56, 'text': 'Partly Cloudy', 'code': 30}, {'day': 'Thu', 'date': 1682611200, 'high': 76, 'low': 57, 'text': 'Mostly Sunny', 'code': 34}, {'day': 'Fri', 'date': 1682697600, 'high': 76, 'low': 58, 'text': 'Mostly Sunny', 'code': 34}, {'day': 'Sat', 'date': 1682784000, 'high': 77, 'low': 59, 'text': 'Partly Cloudy', 'code': 30}, {'day': 'Sun', 'date': 1682870400, 'high': 75, 'low': 59, 'text': 'Partly Cloudy', 'code': 30}, {'day': 'Mon', 'date': 1682956800, 'high': 64, 'low': 54, 'text': 'Cloudy', 'code': 26}, {'day': 'Tue', 'date': 1683043200, 'high': 62, 'low': 52, 'text': 'Mostly Cloudy', 'code': 28}, {'day': 'Wed', 'date': 1683129600, 'high': 60, 'low': 53, 'text': 'Partly Cloudy', 'code': 30}, {'day': 'Thu', 'date': 1683216000, 'high': 62, 'low': 51, 'text': 'Partly Cloudy', 'code': 30}, {'day': 'Fri', 'date': 1683302400, 'high': 63, 'low': 53, 'text': 'Mostly Cloudy', 'code': 28}]}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The fetch worked and we can see all the data, but this is presented in a way that is not very readable. It also has a lot of information we didn't see. Let's say I just want to see the projected weather forecasts.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://yahoo-weather5.p.rapidapi.com/weather"</span>
+
+<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"location"</span><span class="p">:</span><span class="s2">"San Diego"</span><span class="p">,</span><span class="s2">"format"</span><span class="p">:</span><span class="s2">"json"</span><span class="p">,</span><span class="s2">"u"</span><span class="p">:</span><span class="s2">"f"</span><span class="p">}</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"4abcb54450msh7468dfd72294e89p18fbaajsn6d4200063b39"</span><span class="p">,</span>
+	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"yahoo-weather5.p.rapidapi.com"</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"San Diego Weather Forecast:"</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">forecast</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"forecasts"</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">forecast</span><span class="p">):</span>
+	<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">forecast</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span> <span class="o">+</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+	<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>San Diego Weather Forecast:
+
+	day Tue
+	date 1682438400
+	high 67
+	low 55
+	text Mostly Clear
+	code 33
+
+
+	day Wed
+	date 1682524800
+	high 73
+	low 56
+	text Partly Cloudy
+	code 30
+
+
+	day Thu
+	date 1682611200
+	high 76
+	low 57
+	text Mostly Sunny
+	code 34
+
+
+	day Fri
+	date 1682697600
+	high 76
+	low 58
+	text Mostly Sunny
+	code 34
+
+
+	day Sat
+	date 1682784000
+	high 77
+	low 59
+	text Partly Cloudy
+	code 30
+
+
+	day Sun
+	date 1682870400
+	high 75
+	low 59
+	text Partly Cloudy
+	code 30
+
+
+	day Mon
+	date 1682956800
+	high 64
+	low 54
+	text Cloudy
+	code 26
+
+
+	day Tue
+	date 1683043200
+	high 62
+	low 52
+	text Mostly Cloudy
+	code 28
+
+
+	day Wed
+	date 1683129600
+	high 60
+	low 53
+	text Partly Cloudy
+	code 30
+
+
+	day Thu
+	date 1683216000
+	high 62
+	low 51
+	text Partly Cloudy
+	code 30
+
+
+	day Fri
+	date 1683302400
+	high 63
+	low 53
+	text Mostly Cloudy
+	code 28
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As we can see, we now can see the data in a much more organized and readable format, and we only see the forecasts, which is what we wanted to see</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks-and-Point-Division">
+<a class="anchor" href="#Hacks-and-Point-Division" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks and Point Division<a class="anchor-link" href="#Hacks-and-Point-Division"> </a>
+</h1>
+<ul>
+<li>Popcorn questions answered within lesson (.2)</li>
+<li>Screenshot showing proof that conda is installed (.1)</li>
+<li>Create 3 quiz questions to demonstrate the main steps in creating a repository on Github (.1)</li>
+<li>Fetch from a third party API, and display json data. Then use the json data in any simple JavaScript function (hint: parse, this makes json data into a JavaScript object) (.4)<ul>
+<li>In your code, comment on how you implemented a 3rd party API. Reflect on how using the 3rd party API helped.</li>
+</ul>
+</li>
+<li>Pull request successful completion: (.1)</li>
+</ul>
+<p>Extra: Use fetch() and display data from an API, self-made or third party (.1)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h1>
+<h2 id="Screenshot-showing-proof-that-conda-is-installed-(.1)">
+<a class="anchor" href="#Screenshot-showing-proof-that-conda-is-installed-(.1)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshot showing proof that conda is installed (.1)<a class="anchor-link" href="#Screenshot-showing-proof-that-conda-is-installed-(.1)"> </a>
+</h2>
+<p><img src="https://raw.githubusercontent.com/dolphinalt/APCSP-Fastpages/master/_notebooks/images/CondaInstalled.png" alt="CondaInstalled"></p>
+<h2 id="Create-3-quiz-eustions-to-demonstrate-the-main-steps-in-creating-a-repository-on-github-(.1)">
+<a class="anchor" href="#Create-3-quiz-eustions-to-demonstrate-the-main-steps-in-creating-a-repository-on-github-(.1)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create 3 quiz eustions to demonstrate the main steps in creating a repository on github (.1)<a class="anchor-link" href="#Create-3-quiz-eustions-to-demonstrate-the-main-steps-in-creating-a-repository-on-github-(.1)"> </a>
+</h2>
+<pre><code>1. What is the best way to get a copy of an existing github repository?
+
+(A) Fork the repository
+(B) Clone the repository
+(C) Create a new repository and copy the files over
+(D) Create a pull request
+
+The correct answer is (B)
+
+
+2. If I wanted to make a change to a friend's CSP project, what would I use to ask if they want to accept my changes?
+
+(A) Fork the repository
+(B) Clone the repository
+(C) Create an issue in his repository
+(D) Create a pull request
+
+The correct answer is (D)
+
+
+3. Which of the following best describes forking a repository?
+
+(A) Making a branch of the repository in order to make your own changes separate too the main working branch.
+(B) Creating a copy of the repository.
+(C) Letting people know that there is an issue with the current code and asking for a fix.
+(D) None of the above
+
+The correct answer is (A)</code></pre>
+<h2 id="Fetch-from-a-third-party-API,-and-display-json-data.-Then-use-the-json-data-in-any-simple-JavaScript-function-(hint:-parse,-this-makes-json-data-into-a-JavaScript-object)-(.4)">
+<a class="anchor" href="#Fetch-from-a-third-party-API,-and-display-json-data.-Then-use-the-json-data-in-any-simple-JavaScript-function-(hint:-parse,-this-makes-json-data-into-a-JavaScript-object)-(.4)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fetch from a third party API, and display json data. Then use the json data in any simple JavaScript function (hint: parse, this makes json data into a JavaScript object) (.4)<a class="anchor-link" href="#Fetch-from-a-third-party-API,-and-display-json-data.-Then-use-the-json-data-in-any-simple-JavaScript-function-(hint:-parse,-this-makes-json-data-into-a-JavaScript-object)-(.4)"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">http.client</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">"visual-crossing-weather.p.rapidapi.com"</span><span class="p">)</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'content-type'</span><span class="p">:</span> <span class="s2">"application/octet-stream"</span><span class="p">,</span>
+    <span class="s1">'X-RapidAPI-Key'</span><span class="p">:</span> <span class="s2">"68b28d2802msh609f62c1192337dp1eca9ejsnb9175b996d5a"</span><span class="p">,</span>
+    <span class="s1">'X-RapidAPI-Host'</span><span class="p">:</span> <span class="s2">"visual-crossing-weather.p.rapidapi.com"</span>
+<span class="p">}</span>
+
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="s2">"/forecast?aggregateHours=24&amp;location=Washington%2CDC%2CUSA&amp;contentType=csv&amp;unitGroup=us&amp;shortColumnNames=0"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">))</span> <span class="c1"># the .decode function turns the json object into a printable string, similar to the .stringify json function in javascript</span>
+
+<span class="c1"># This api helped me because it allows me to quickly and easily get weather conditions to use within my project, instead of needing to go and manually input the data myself.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Address,Date time,Latitude,Longitude,Resolved Address,Name,Wind Direction,Minimum Temperature,Maximum Temperature,Temperature,Wind Speed,Cloud Cover,Heat Index,Chance Precipitation (%),Precipitation,Sea Level Pressure,Snow Depth,Snow,Relative Humidity,Wind Gust,Wind Chill,Conditions
+"Washington,DC,USA","04/28/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",70.0,58.0,58.0,58.0,11.4,100.0,,73.0,0.09,1010.0,0.0,0.0,93.7,16.1,,"Rain, Overcast"
+"Washington,DC,USA","04/29/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",119.2,56.9,67.0,61.0,6.5,87.0,,73.0,0.52,1008.4,0.0,0.0,85.6,13.9,,"Rain, Overcast"
+"Washington,DC,USA","04/30/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",138.3,56.9,65.0,60.7,8.7,88.9,,98.0,0.88,997.2,0.0,0.0,88.7,13.9,,"Rain, Overcast"
+"Washington,DC,USA","05/01/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",252.9,49.9,61.1,56.3,15.1,33.0,,16.0,0.03,994.0,0.0,0.0,58.9,31.1,46.6,"Partially cloudy"
+"Washington,DC,USA","05/02/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",251.3,50.1,58.4,54.3,16.5,58.7,,43.0,0.0,1001.1,0.0,0.0,56.7,29.3,42.9,"Partially cloudy"
+"Washington,DC,USA","05/03/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",291.3,46.8,58.9,53.0,16.8,36.3,,33.0,0.0,1004.8,0.0,0.0,56.6,31.1,40.9,"Partially cloudy"
+"Washington,DC,USA","05/04/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",309.2,47.2,64.8,56.2,12.9,31.2,,36.0,0.0,1013.0,0.0,0.0,57.9,22.8,41.8,"Partially cloudy"
+"Washington,DC,USA","05/05/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",215.8,51.7,65.4,58.9,8.1,52.6,,40.0,0.04,1019.7,0.0,0.0,66.1,15.2,42.2,"Partially cloudy"
+"Washington,DC,USA","05/06/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",248.0,44.9,63.2,54.3,5.0,28.3,,42.9,0.0,1022.8,0.0,0.0,65.4,12.4,43.1,"Partially cloudy"
+"Washington,DC,USA","05/07/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",314.4,48.6,72.4,60.0,6.4,30.2,,33.3,0.0,1021.7,0.0,0.0,59.0,18.8,46.0,"Partially cloudy"
+"Washington,DC,USA","05/08/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",264.4,53.0,75.1,64.5,4.1,12.9,,19.0,0.0,1020.5,0.0,0.0,54.9,10.1,,"Clear"
+"Washington,DC,USA","05/09/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",211.9,56.4,81.2,69.2,7.0,95.8,80.2,38.1,0.0,1016.3,0.0,0.0,52.4,32.7,,"Overcast"
+"Washington,DC,USA","05/10/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",241.9,66.8,82.3,73.1,8.8,39.1,81.1,47.6,0.01,1014.4,0.0,0.0,53.1,31.3,,"Partially cloudy"
+"Washington,DC,USA","05/11/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",213.8,64.7,89.9,76.4,9.8,34.2,88.3,19.0,0.01,1013.3,0.0,0.0,58.1,26.8,,"Partially cloudy"
+"Washington,DC,USA","05/12/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",225.4,67.2,73.8,70.8,6.6,99.6,,28.6,0.1,1015.6,0.0,0.0,79.8,24.4,,"Overcast"
+"Washington,DC,USA","05/13/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",116.8,64.8,71.0,67.0,4.3,99.9,,42.9,0.1,1020.2,0.0,0.0,83.7,19.8,,"Overcast"
+"Washington,DC,USA","05/14/2023",38.8904,-77.032,"Washington, DC, United States","Washington,DC,USA",49.8,63.8,64.7,64.0,5.0,100.0,,14.3,0.4,1021.3,0.0,0.0,97.4,16.6,,"Overcast"
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="dolphinalt/APCSP-Fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/APCSP-Fastpages/fastpages/jupyter/2023/04/26/FinalLesson.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/APCSP-Fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://dolphinalt.github.io/APCSP-Fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/APCSP-Fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/nighthawkcoders “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/APCSP-Fastpages/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://twitter.com/NighthawkCoding “" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/APCSP-Fastpages/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/APCSP-Fastpages/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
