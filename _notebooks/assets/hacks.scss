@@ -1,0 +1,16 @@
+$true: "yes";
+
+@function randColor() {
+    @return rgb(random(255),random(255),random(255));
+}
+@mixin background {
+    @while $true {
+        background-color: randColor();
+    }
+}
+
+body {
+    div {
+        @include background;
+    }
+}
