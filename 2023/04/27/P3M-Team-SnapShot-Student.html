@@ -1251,48 +1251,33 @@ Cell <span class="ansi-green-fg">In[44], line 12</span>
 <span class="c1"># Create a cursor object to execute SQL commands</span>
 <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
-<span class="c1"># Create a table in the database using SQL commands</span>
-<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;CREATE TABLE image</span>
-<span class="s1">                 (name TEXT PRIMARY KEY, data BLOB)&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="c1"># # Create a table in the database using SQL commands</span>
+<span class="c1"># cursor.execute(&#39;&#39;&#39;CREATE TABLE image</span>
+<span class="c1">#                  (name TEXT PRIMARY KEY, data BLOB)&#39;&#39;&#39;)</span>
 
 <span class="c1"># Commit the changes to the database</span>
 <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 
-<span class="c1"># Close the connection</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">addImg</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="c1"># Read the image file as binary data</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">jpg</span><span class="p">:</span>
+        <span class="n">image_data</span> <span class="o">=</span> <span class="n">jpg</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="c1"># Read the image file as binary data</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;newImage.png&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">jpg</span><span class="p">:</span>
-    <span class="n">image_data</span> <span class="o">=</span> <span class="n">jpg</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="c1"># Insert the image data into the database</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO image (name, data) VALUES (?, ?)&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">image_data</span><span class="p">))</span>
 
-<span class="c1"># Insert the image data into the database</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO images (name, data) VALUES (?, ?)&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;image2&#39;</span><span class="p">,</span> <span class="n">image_data</span><span class="p">))</span>
+    <span class="c1"># Commit the transaction</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 
-<span class="c1"># Commit the transaction</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="c1"># Close the connection</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-<span class="c1"># Close the connection</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the image file name: &quot;</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name of the table: &quot;</span><span class="p">)</span>
+    <span class="n">addImg</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 
-<span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">import</span> <span class="nn">io</span>
-
-<span class="c1"># Open a connection to the SQLite database</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span>
-
-<span class="c1"># Retrieve the image data from the database</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT data FROM images WHERE name=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">,))</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
-
-<span class="c1"># Convert the binary data to an image object</span>
-<span class="n">image_data</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">image_data</span><span class="p">)</span>
-
-<span class="c1"># Display the image</span>
-<span class="n">image</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Close the connection</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">main</span><span class="p">()</span>
 </pre></div>
 
     </div>
