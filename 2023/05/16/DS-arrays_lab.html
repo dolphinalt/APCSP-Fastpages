@@ -459,10 +459,10 @@ For loop with shortcut (*) row expansion
 
 
 
-<div id="8b3b9d57-98c0-4a8f-8985-31759df6dbc3"></div>
+<div id="fff6130d-ab20-4cb8-83ae-554cf1676d77"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#8b3b9d57-98c0-4a8f-8985-31759df6dbc3');
+var element = $('#fff6130d-ab20-4cb8-83ae-554cf1676d77');
 
 /*
 * Creator: Nighthawk Coding Society
@@ -586,7 +586,8 @@ element.append(arr2D);
         <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" little monkeys jumping on the bed..."</span><span class="p">)</span>
 
         <span class="c1"># cycle through monkeys that are left in poem countdown</span>
-        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>  <span class="c1"># cycles through remaining monkeys in countdown</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">row</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">:</span>  <span class="c1"># cycles through remaining monkeys in countdown</span>
 
             <span class="c1"># cycles through monkey part by part</span>
             <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">monkeys</span><span class="p">[</span><span class="n">row</span><span class="p">])):</span>
@@ -595,6 +596,7 @@ element.append(arr2D);
 
             <span class="c1"># this new line gives separation between stanza of poem</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\u001b</span><span class="s2">[0m"</span><span class="p">)</span>  <span class="c1"># reset color</span>
+            <span class="n">row</span> <span class="o">+=</span><span class="mi">1</span>
             
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
@@ -619,9 +621,11 @@ element.append(arr2D);
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>No more monkeys jumping on the bed
-0000000000000000000000000000000000
-             THE END              
+<pre>Nursery Rhyme
+3 little monkeys jumping on the bed...
+  \_⏄_/     \_⎏_/     \_⎐_/    \_⍾_/     \_⍾_/  
+ʕง ͠° ͟ل͜ ͡°)ʔ   ʕ༼ ◕_◕ ༽ʔ   ʕ(▀ ⍡ ▀)ʔ ʕ ͡° ͜ʖ ° ͡ʔ   (◕‿◕✿)  
+<span class="ansi-red-fg"> </span><span class="ansi-green-fg"> </span><span class="ansi-yellow-fg"> </span><span class="ansi-blue-fg"> </span><span class="ansi-magenta-fg"> </span>
 </pre>
 </div>
 </div>
